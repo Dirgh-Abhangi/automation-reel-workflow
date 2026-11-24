@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Free Lift — Ep 4 Series Finale Cover Page</title>
+<style>
+  @font-face { font-family: 'Inter'; font-weight: 900; src: url('fonts/Inter-Black.otf'); }
+  @font-face { font-family: 'FreeMono'; font-weight: 700; src: url('fonts/FreeMonoBold.ttf'); }
+  html, body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; }
+  canvas { display: block; width: 1080px; height: 1920px; }
+</style>
+</head>
+<body>
+<canvas id="cv" width="1080" height="1920"></canvas>
+<script type="module">
+import { W, H, PAL, INK, TAU, rrPath, radGrad, linGrad, fillStroke, vignette, filmGrainOverlay } from './src/palette.js';
+import { drawStamp, drawTopHUD, drawArrowCallout } from './src/hud.js';
+import { drawMaya } from './src/chars.js';
+import { drawModernLobbySet, drawModernElevatorPanel, draw1978BrassBadge, drawBreakerBox } from './src/keyframes_ep4.js';
+
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+
+async function renderCover() {
+  await document.fonts.ready;
+
+  // 1. BASE SET: Modern 2026 Lobby in radiant morning daylight
+  drawModernLobbySet(ctx, { time: 'morning' });
+
+  // Deep cinematic gradient overlay to make typography and hero pop
+  ctx.fillStyle = linGrad(ctx, 0, 0, 0, H, [
+    [0, 'rgba(4, 7, 14, 0.94)'],
+    [0.18, 'rgba(10, 16, 26, 0.65)'],
+    [0.45, 'rgba(6, 10, 18, 0.25)'],
+    [0.78, 'rgba(8, 12, 20, 0.75)'],
+    [1, 'rgba(3, 5, 10, 0.98)'],
+  ]);
+  ctx.fillRect(0, 0, W, H);
+
+  // Background Element Left: Shattered 1978 Substation Breaker Box (Ghostly remembrance)
+  ctx.save();
+  ctx.translate(130, 720);
+  ctx.scale(0.65, 0.65);
+  ctx.globalAlpha = 0.55;
+  drawBreakerBox(ctx, { smashed: true, sparks: true });
+  ctx.restore();
+
+  // Background Element Right: Modern Elevator Panel with Button 13 SEALED
+  ctx.save();
+  ctx.translate(880, 680);
+  ctx.scale(0.70, 0.70);
+  ctx.globalAlpha = 0.85;
+  drawModernElevatorPanel(ctx, { currentFloor: 1 });
+  ctx.restore();
+
+  // Atmospheric Radial Spotlights:
+  // Golden Morning Sunrise Halo behind Maya (Center)
+  ctx.fillStyle = radGrad(ctx, 540, 920, 60, 520, [
+    [0, 'rgba(255, 215, 0, 0.40)'],
+    [0.45, 'rgba(0, 229, 255, 0.20)'],
+    [1, 'rgba(0,0,0,0)'],
+  ]);
+  ctx.beginPath();
+  ctx.arc(540, 920, 520, 0, TAU);
+  ctx.fill();
+
+  // 2. HERO CHARACTER: Dr. Maya Chen (Unified, Victorious, Free)
+  // Centered in 1:1 Instagram Grid y=420..1500
+  ctx.save();
+  ctx.translate(540, 1080);
+  drawMaya(ctx, 0, 0, 1.25, { mood: 'smile', pose: 'stand' });
+  ctx.restore();
+
+
+  // Hero Foreground Artifact: The 1978 Brass Badge in her hands / foreground
+  ctx.save();
+  ctx.translate(540, 1280);
+  ctx.shadowColor = 'rgba(255, 215, 0, 0.7)';
+  ctx.shadowBlur = 32;
+  draw1978BrassBadge(ctx, 0, 0, 1.45);
+  ctx.restore();
+
+  // 3. TOP BANNER & IDENTITY HUD (y=60..380)
+  drawTopHUD(ctx, { title: 'THE FREE LIFT • SERIES FINALE' });
+
+  // Grand Finale Master Pill
+  rrPath(ctx, W / 2 - 320, 150, 640, 64, 32);
+  fillStroke(ctx, 'rgba(220, 38, 38, 0.95)', 3, PAL.gold);
+  ctx.font = '900 24px Inter, sans-serif';
+  ctx.fillStyle = '#ffffff';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.8)'; ctx.shadowBlur = 8;
+  ctx.fillText('★ THE PARADOX SHATTERED • GRAND FINALE ★', W / 2, 182);
+  ctx.shadowBlur = 0;
+
+  // Punchy Episode Hook Headline (Massive Viral Display)
+  ctx.textAlign = 'center';
+  ctx.font = '900 68px Inter, sans-serif';
+  ctx.fillStyle = '#ffffff';
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.95)';
+  ctx.shadowBlur = 18;
+  ctx.fillText('THE 13TH FLOOR', W / 2, 275);
+  ctx.fillStyle = PAL.gold;
+  ctx.font = '900 74px Inter, sans-serif';
+  ctx.fillText('DOES NOT EXIST!', W / 2, 355);
+  ctx.shadowBlur = 0;
+
+  // Sub-badge: LOOP BROKEN & SECRETS EXPLAINED
+  drawStamp(ctx, 70, 420, 'TIMELINE RESTORED', 'YEAR 2026', { color: '#00e5ff' });
+  drawStamp(ctx, 740, 420, 'LOOP STATUS', 'SHATTERED (100%)', { color: '#4ade80' });
+
+  // Floating Context Badges (Instagram 1:1 Safe Zone)
+  drawArrowCallout(ctx, 240, 620, '480V BREAKER', 'SMASHED WITH AXE', 'down');
+  drawArrowCallout(ctx, 840, 620, 'BUTTON 13', 'PERMANENTLY SEALED', 'down');
+
+  // Badge callout pointing to the golden badge
+  drawArrowCallout(ctx, 540, 1420, 'ONLY PROOF LEFT', '1978 CHIEF SURGEON BADGE', 'up');
+
+  // 4. BOTTOM ACTION & CALL TO ACTION (y=1530..1860)
+  rrPath(ctx, 60, 1530, W - 120, 230, 24);
+  fillStroke(ctx, 'rgba(11, 17, 32, 0.94)', 3, PAL.gold);
+
+  ctx.fillStyle = '#00e5ff';
+  ctx.font = '900 26px Inter, sans-serif';
+  ctx.fillText('FINALE REVEAL: KAISE TOOTA 1978 KA TEMPORAL LOOP?', W / 2, 1575);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '700 23px Inter, sans-serif';
+  ctx.fillText('Elias Ward ki Cryogenic containment khatam... Dono Maya mili ek bankar.', W / 2, 1618);
+  ctx.fillText('Subah 8:15 baje, real world mein elevator ke darwaze khule!', W / 2, 1656);
+
+  // Big Subscribe / Full Story Button
+  rrPath(ctx, W / 2 - 340, 1695, 680, 50, 25);
+  fillStroke(ctx, 'linear-gradient(135deg, #ffd54f 0%, #ff8f00 100%)', 0, '');
+  ctx.fillStyle = '#0f172a';
+  ctx.font = '900 24px Inter, sans-serif';
+  ctx.fillText('COMPLETE 4-PART HORROR SERIES • FULL STORY EXPLAINED', W / 2, 1720);
+
+  // Final Cinematic Textures
+  vignette(ctx, 0.38);
+  filmGrainOverlay(ctx, 0.022);
+
+  window.COVER_READY = true;
+}
+
+window.addEventListener('load', renderCover);
+</script>
+</body>
+</html>

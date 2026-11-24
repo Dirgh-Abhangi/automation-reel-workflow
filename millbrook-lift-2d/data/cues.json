@@ -1,0 +1,190 @@
+{
+ "duration": 120.246,
+ "cues": [
+  {
+   "t": 0.05,
+   "type": "whoosh",
+   "gain": 0.7
+  },
+  {
+   "t": 3.235,
+   "type": "chime"
+  },
+  {
+   "t": 8.419,
+   "type": "chime",
+   "gain": 0.75
+  },
+  {
+   "t": 9.619,
+   "type": "whoosh"
+  },
+  {
+   "t": 9.959,
+   "type": "ping"
+  },
+  {
+   "t": 15.269,
+   "type": "stamp",
+   "gain": 0.85
+  },
+  {
+   "t": 20.692,
+   "type": "chain"
+  },
+  {
+   "t": 23.168,
+   "type": "whoosh"
+  },
+  {
+   "t": 23.268,
+   "type": "page"
+  },
+  {
+   "t": 27.998,
+   "type": "write"
+  },
+  {
+   "t": 31.186,
+   "type": "write"
+  },
+  {
+   "t": 35.262,
+   "type": "write"
+  },
+  {
+   "t": 40.622,
+   "type": "stamp"
+  },
+  {
+   "t": 41.533,
+   "type": "whoosh"
+  },
+  {
+   "t": 42.133,
+   "type": "footstep",
+   "pan": -0.2
+  },
+  {
+   "t": 43.033,
+   "type": "footstep",
+   "pan": 0.15
+  },
+  {
+   "t": 43.933,
+   "type": "footstep",
+   "pan": -0.1
+  },
+  {
+   "t": 52.977,
+   "type": "silence_drop",
+   "dur": 4.488999999999997
+  },
+  {
+   "t": 53.427,
+   "type": "creak",
+   "dur": 3.888999999999997
+  },
+  {
+   "t": 54.327,
+   "type": "stamp",
+   "gain": 0.7
+  },
+  {
+   "t": 58.446,
+   "type": "batt_warn"
+  },
+  {
+   "t": 61.484,
+   "type": "power_cut"
+  },
+  {
+   "t": 61.534,
+   "type": "doom"
+  },
+  {
+   "t": 65.675,
+   "type": "chime",
+   "gain": 0.65
+  },
+  {
+   "t": 70.885,
+   "type": "slam"
+  },
+  {
+   "t": 72.253,
+   "type": "dial_tick"
+  },
+  {
+   "t": 72.973,
+   "type": "dial_tick"
+  },
+  {
+   "t": 73.413,
+   "type": "dial_tick"
+  },
+  {
+   "t": 76.213,
+   "type": "silence_drop",
+   "dur": 1.5
+  },
+  {
+   "t": 77.133,
+   "type": "sting"
+  },
+  {
+   "t": 85.347,
+   "type": "squelch"
+  },
+  {
+   "t": 85.547,
+   "type": "type_tick",
+   "dur": 2.2
+  },
+  {
+   "t": 85.647,
+   "type": "alarm",
+   "dur": 3,
+   "gain": 0.5
+  },
+  {
+   "t": 91.398,
+   "type": "door_grind",
+   "dur": 1.5
+  },
+  {
+   "t": 94.878,
+   "type": "thud"
+  },
+  {
+   "t": 97.138,
+   "type": "stamp"
+  },
+  {
+   "t": 97.138,
+   "type": "chime"
+  },
+  {
+   "t": 99.714,
+   "type": "doom",
+   "gain": 0.65
+  },
+  {
+   "t": 108.601,
+   "type": "sting"
+  },
+  {
+   "t": 108.601,
+   "type": "stamp"
+  },
+  {
+   "t": 109.618,
+   "type": "whoosh"
+  },
+  {
+   "t": 109.918,
+   "type": "heartbeat",
+   "dur": 10.128
+  }
+ ]
+}

@@ -1,0 +1,192 @@
+{
+  "title": "The Free Lift — Episode 1: 2:47 AM (Hinglish Cut)",
+  "lead": 0.45,
+  "outro": 1.3,
+  "default_gap": 0.34,
+  "music": "horror_score",
+  "lines": [
+    {
+      "id": 0, "act": 1, "character": "Narrator", "lang": "hi", "mood": "calm", "breath": true,
+      "text": "Har hospital ke blueprint par... sirf barah floors likhe hain.",
+      "tts_text": "हर हॉस्पिटल के ब्लूप्रिंट पर... सिर्फ़ बारह फ़्लोर्स लिखे हैं।",
+      "caps": "HAR BLUEPRINT PAR | *12 FLOORS.",
+      "speed": 1.04, "gap": 0.32
+    },
+    {
+      "id": 1, "act": 1, "character": "Narrator", "lang": "hi", "mood": "tense",
+      "text": "Lekin is peetal ki lift ke andar... terah buttons hain.",
+      "tts_text": "लेकिन इस पीतल की लिफ़्ट के अंदर... तेरह बटन्स हैं।",
+      "caps": "IS LIFT KE ANDAR | *13 BUTTONS.",
+      "speed": 1.03, "gap": 0.38
+    },
+    {
+      "id": 2, "act": 1, "character": "Narrator", "lang": "hi", "mood": "hush", "breath": true, "reverbTail": true,
+      "text": "Par kya aapko pata hai... ye aakhir kiske liye... rukti hai?",
+      "tts_text": "पर क्या आपको पता है... ये आखिर किसके लिए... रुकती है?",
+      "caps": "YE AAKHIR | *KISKE LIYE *RUKTI HAI?",
+      "speed": 1.00, "gap": 0.58
+    },
+    {
+      "id": 3, "act": 2, "character": "Narrator", "lang": "hi", "mood": "calm", "breath": true,
+      "text": "Ninyanve raat tak, Maya ne khaali corridors shoot kiye... bhooton ko jhootha saabit karne.",
+      "tts_text": "निन्यानवे रात तक, माया ने खाली कॉरिडोर्स शूट किए... भूतों को झूठा साबित करने।",
+      "caps": "*99 RAATEIN | khaali corridors *shoot kiye.",
+      "speed": 1.08, "gap": 0.30
+    },
+    {
+      "id": 4, "act": 2, "character": "Narrator", "lang": "hi", "mood": "tense",
+      "text": "Sirf dhool. Zero views. Koi bhoot pret nahi.",
+      "tts_text": "सिर्फ़ धूल। ज़ीरो व्यूज़। कोई भूत प्रेत नहीं।",
+      "caps": "*ZERO VIEWS. | *KOI BHOOT NAHI.",
+      "speed": 1.04, "gap": 0.38
+    },
+    {
+      "id": 5, "act": 2, "character": "Narrator", "lang": "hi", "mood": "tense", "breath": true,
+      "text": "Phir ek leaked nurse comment ne usey Wing B bheja... theek do saintalis AM par.",
+      "tts_text": "फिर एक लीक्ड नर्स कमेंट ने उसे विंग बी भेजा... ठीक दो सैंतालीस ए एम पर।",
+      "caps": "EK LEAKED *DARE: | MILLBROOK *WING B | *2:47 AM.",
+      "speed": 1.06, "gap": 0.48
+    },
+    {
+      "id": 6, "act": 3, "character": "Narrator", "lang": "hi", "mood": "calm", "breath": true,
+      "text": "Band lobby ke andar, usey watchman ke teen purane rules... likhe mile.",
+      "tts_text": "बंद लॉबी के अंदर... उसे वॉचमैन के तीन पुराने रूल्स... लिखे मिले।",
+      "caps": "USEY MILE | TEEN NIGHT *RULES.",
+      "speed": 1.05, "gap": 0.36
+    },
+    {
+      "id": 7, "act": 3, "character": "Narrator", "lang": "hi", "mood": "tense",
+      "text": "Rule number ek... khule morgue darwaze ke andar... kabhi mat jana.",
+      "tts_text": "रूल नंबर एक... खुले मॉर्ग दरवाज़े के अंदर... कभी मत जाना।",
+      "caps": "RULE 1: | *OPEN MORGUE | MEIN MAT JANA.",
+      "speed": 1.04, "gap": 0.40
+    },
+    {
+      "id": 8, "act": 3, "character": "Narrator", "lang": "hi", "mood": "tense",
+      "text": "Rule number do... agar lift apne aap chale... to sheeshe mein mat dekhna.",
+      "tts_text": "रूल नंबर दो... अगर लिफ़्ट अपने आप चले... तो शीशे में मत देखना।",
+      "caps": "RULE 2: | SHEESHE MEIN | *MAT DEKHNA.",
+      "speed": 1.04, "gap": 0.40
+    },
+    {
+      "id": 9, "act": 3, "character": "Narrator", "lang": "hi", "mood": "hush", "breath": true, "reverbTail": true,
+      "text": "Rule number teen... Floor terah 1978 se sealed hai. Speaker tumhara naam le... to jawab mat dena.",
+      "tts_text": "रूल नंबर तीन... फ़्लोर तेरह नाइंटीन सेवंटी एट से सील्ड है। अगर स्पीकर तुम्हारा नाम ले... तो जवाब मत देना।",
+      "caps": "RULE 3: | SEALED *1978. | *JAWAB MAT DENA.",
+      "speed": 1.02, "gap": 0.60
+    },
+    {
+      "id": 10, "act": 4, "character": "Narrator", "lang": "hi", "mood": "hush", "breath": true,
+      "text": "Basement hallway mein... barfeeli hawa... teen inch khule morgue door se aa rahi thi.",
+      "tts_text": "बेसमेंट हॉलवे में... बर्फ़ीली हवा... तीन इंच खुले मॉर्ग डोर से बाहर आ रही थी।",
+      "caps": "*MORGUE DOOR | TEEN INCH *KHULA THA.",
+      "speed": 1.05, "gap": 0.42
+    },
+    {
+      "id": 11, "act": 4, "character": "Maya", "mood": "curious",
+      "text": "Night one hundred... wait, why is the morgue door unlocked?",
+      "caps": "*NIGHT 100... | why is the *morgue *unlocked?",
+      "speed": 0.96, "gap": 0.42
+    },
+    {
+      "id": 12, "act": 4, "character": "Narrator", "lang": "hi", "mood": "hush", "breath": true,
+      "text": "Maya paas gayi... aur usne woh thanda peetal ka handle... kheench liya.",
+      "tts_text": "माया पास गई... और उसने वो ठंडा पीतल का हैंडल... खींच लिया।",
+      "caps": "USNE KHEENCHA | *THANDA HANDLE...",
+      "speed": 1.00, "gap": 1.05
+    },
+    {
+      "id": 13, "act": 4, "character": "Narrator", "lang": "hi", "mood": "urgent",
+      "text": "Uska phone ek baar jhapka. Sirf ek percent bacha tha.",
+      "tts_text": "उसका फ़ोन एक बार झपका। सिर्फ़ एक परसेंट बचा था।",
+      "caps": "PHONE JHAPKA: | *1% BATTERY.",
+      "speed": 1.06, "gap": 0.30
+    },
+    {
+      "id": 14, "act": 4, "character": "Narrator", "lang": "hi", "mood": "hush", "reverbTail": true,
+      "text": "Tabhi achanak... bilkul ghana... andhera.",
+      "tts_text": "तभी अचानक... बिल्कुल घना... अंधेरा।",
+      "caps": "TABHI ACHANAK... | *GHANA *ANDHERA.",
+      "speed": 0.94, "gap": 0.65
+    },
+    {
+      "id": 15, "act": 4, "character": "Maya", "mood": "panic",
+      "text": "Hello? Is someone down here?",
+      "caps": "*HELLO?! | Is *someone down here?",
+      "speed": 0.95, "gap": 0.42
+    },
+    {
+      "id": 16, "act": 5, "character": "Narrator", "lang": "hi", "mood": "urgent", "breath": true,
+      "text": "Peeche peetal ki lift khud khul gayi. Woh andar gayi... aur lohe ke darwaze zor se band ho gaye.",
+      "tts_text": "पीछे पीतल की लिफ़्ट खुद खुल गई। वो अंदर गई... और लोहे के दरवाज़े ज़ोर से बंद हो गए।",
+      "caps": "WOH ANDAR GAYI. | DOORS *SLAMMED *SHUT.",
+      "speed": 1.07, "gap": 0.40
+    },
+    {
+      "id": 17, "act": 5, "character": "Narrator", "lang": "hi", "mood": "hush",
+      "text": "Floor ek... floor paanch... floor baarah. Phir usne upar dekha... us sheeshe mein...",
+      "tts_text": "फ़्लोर एक... फ़्लोर पांच... फ़्लोर बारह। फिर उसने ऊपर देखा... सामने... उस शीशे में...",
+      "caps": "FLOOR 1... 5... *12. | SHEESHE MEIN *DEKHA...",
+      "speed": 1.00, "gap": 1.15
+    },
+    {
+      "id": 18, "act": 5, "character": "Narrator", "lang": "hi", "mood": "hush", "reverbTail": true,
+      "text": "Aur sunn reh gayi. Sheeshe ke andar... poori lift... bilkul khaali thi.",
+      "tts_text": "और सन्न रह गई। शीशे के अंदर... पूरी लिफ़्ट... बिल्कुल खाली थी।",
+      "caps": "SHEESHA | BILKUL *KHAALI THA.",
+      "speed": 0.97, "gap": 0.38
+    },
+    {
+      "id": 19, "act": 5, "character": "Maya", "mood": "panic",
+      "text": "Wait, where am I? Why can't I see myself?!",
+      "caps": "*WHERE AM I?! | Why can't I *see myself?!",
+      "speed": 1.02, "gap": 0.50
+    },
+    {
+      "id": 20, "act": 6, "character": "DrWard", "mood": "intercom",
+      "text": "Maya Chen. You were never supposed to find this. Welcome to Floor thirteen.",
+      "caps": "WARD: *MAYA CHEN. | WELCOME TO | *FLOOR 13.",
+      "speed": 0.88, "gap": 0.60
+    },
+    {
+      "id": 21, "act": 6, "character": "Narrator", "lang": "hi", "mood": "tense", "breath": true, "reverbTail": true,
+      "text": "Darwaze andhere mein khule... beech mein purana mailbox, uski khud ki file... stamped dead 1978.",
+      "tts_text": "दरवाज़े गहरे अंधेरे में खुले... बीच में एक पुराना मेलबॉक्स... जिसमें उसकी खुद की फ़ाइल थी... लाल स्टैम्प... डेड... नाइंटीन सेवंटी एट।",
+      "caps": "MAILBOX MEIN | USKI APNI FILE... | STAMPED *DECEASED 1978.",
+      "speed": 1.03, "gap": 0.52
+    },
+    {
+      "id": 22, "act": 6, "character": "Entity", "mood": "whisper",
+      "text": "She's yours now.",
+      "caps": "*\"SHE'S YOURS *NOW.\"",
+      "speed": 0.78, "gap": 0.42
+    },
+    {
+      "id": 23, "act": 6, "character": "Maya", "mood": "panic",
+      "text": "What... what's happening to my hands?!",
+      "caps": "WHAT'S HAPPENING | TO *MY HANDS?!",
+      "speed": 0.98, "gap": 0.42
+    },
+    {
+      "id": 24, "act": 6, "character": "Narrator", "lang": "hi", "mood": "hush", "reverbTail": true,
+      "text": "Peeche sheeshe mein... do kaali khokhli aankhein muskura rahi thin... woh Maya nahi thi.",
+      "tts_text": "पीछे अंधेरे शीशे में... दो काली खोखली आंखें... मुस्कुरा रही थीं... और वो... माया नहीं थी।",
+      "caps": "*KHOKHLI AANKHEIN | MUSKURA RAHI THIN. | WOH *MAYA NAHI THI.",
+      "speed": 0.97, "gap": 0.75
+    },
+    {
+      "id": 25, "act": 7, "character": "Narrator", "lang": "hi", "mood": "urgent", "breath": true,
+      "text": "Agar aap Floor terah par phanse hote... to Exit doors ki taraf bhaagte, ya chamakta Keycard uthaate?",
+      "tts_text": "अगर आप फ़्लोर तेरह पर फंसे होते... तो एग्ज़िट डोर की तरफ़ भागते... या वो चमकता कीकार्ड उठाते?",
+      "caps": "*EXIT [A] BHAAGOGE | YA *KEYCARD [B]?",
+      "speed": 1.06, "gap": 0.32
+    },
+    {
+      "id": 26, "act": 7, "character": "Narrator", "lang": "hi", "mood": "tense",
+      "text": "Abhi comment mein A ya B likho. Follow karo... Part Two aap likhoge.",
+      "tts_text": "अभी कमेंट में ए या बी लिखो। फ़ॉलो करो... पार्ट टू आप लिखोगे।",
+      "caps": "COMMENT *A YA B! | *PART 2 AAP *LIKHOGE.",
+      "speed": 1.03, "gap": 0.42
+    }
+  ]
+}

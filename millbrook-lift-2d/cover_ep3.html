@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Free Lift — Ep 3 Cover Page</title>
+<style>
+  @font-face { font-family: 'Inter'; font-weight: 900; src: url('fonts/Inter-Black.otf'); }
+  @font-face { font-family: 'FreeMono'; font-weight: 700; src: url('fonts/FreeMonoBold.ttf'); }
+  html, body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; }
+  canvas { display: block; width: 1080px; height: 1920px; }
+</style>
+</head>
+<body>
+<canvas id="cv" width="1080" height="1920"></canvas>
+<script type="module">
+import { W, H, PAL, INK, TAU, rrPath, radGrad, linGrad, fillStroke, vignette, filmGrainOverlay } from './src/palette.js';
+import { drawStamp, drawTopHUD, drawArrowCallout } from './src/hud.js';
+import { drawMaya } from './src/chars.js';
+import { drawHospitalLobbySet, drawDrMaya } from './src/keyframes_ep3.js';
+
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+
+async function renderCover() {
+  await document.fonts.ready;
+
+  // 1. BASE SET: Vintage 1978 Hospital Lobby & Clinical Morgue Blend
+  drawHospitalLobbySet(ctx, { time: 'morning', redAlert: false });
+
+  // Deep cinematic gradient wash to pop characters and text
+  ctx.fillStyle = linGrad(ctx, 0, 0, 0, H, [
+    [0, 'rgba(4, 7, 14, 0.96)'],
+    [0.18, 'rgba(10, 16, 26, 0.72)'],
+    [0.50, 'rgba(6, 10, 18, 0.40)'],
+    [0.80, 'rgba(12, 6, 8, 0.82)'],
+    [1, 'rgba(4, 6, 12, 0.98)'],
+  ]);
+  ctx.fillRect(0, 0, W, H);
+
+  // Atmospheric Radial Spotlights:
+  // Clinical Cyan / Teal glow behind Dr. Maya (Left)
+  ctx.fillStyle = radGrad(ctx, 290, 950, 40, 480, [
+    [0, 'rgba(0, 229, 255, 0.35)'],
+    [0.5, 'rgba(0, 77, 64, 0.22)'],
+    [1, 'rgba(0,0,0,0)'],
+  ]);
+  ctx.beginPath();
+  ctx.arc(290, 950, 480, 0, TAU);
+  ctx.fill();
+
+  // Fiery Amber / Crimson glow behind Classic Maya (Right)
+  ctx.fillStyle = radGrad(ctx, 790, 950, 40, 480, [
+    [0, 'rgba(230, 81, 0, 0.35)'],
+    [0.5, 'rgba(183, 28, 28, 0.22)'],
+    [1, 'rgba(0,0,0,0)'],
+  ]);
+  ctx.beginPath();
+  ctx.arc(790, 950, 480, 0, TAU);
+  ctx.fill();
+
+  // Vertical Temporal Rift Divider down center
+  const divX = W * 0.5;
+  ctx.strokeStyle = '#00e5ff'; ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.moveTo(divX, 220);
+  for (let y = 240; y < 1440; y += 40) {
+    const jitter = Math.sin(y * 0.08) * 16;
+    ctx.lineTo(divX + jitter, y);
+  }
+  ctx.lineTo(divX, 1440);
+  ctx.stroke();
+
+  // Outer Golden Plasma Glow on Rift
+  ctx.strokeStyle = 'rgba(255, 234, 0, 0.35)'; ctx.lineWidth = 14;
+  ctx.stroke();
+
+  // 2. HERO CHARACTERS: FACE-TO-FACE TIME PARADOX (Centered in 1:1 Instagram Grid y=420..1500)
+  // Left: Dr. Maya Chen (Chief Surgeon 1978)
+  ctx.save();
+  ctx.translate(290, 1060);
+  drawDrMaya(ctx, 0, 0, 1.28, {
+    mood: 'shock',
+    holdScalpel: true,
+    bloodStains: true,
+    look: [0.6, 0.0],
+  });
+  ctx.restore();
+
+  // Right: Present Day Maya (Blue Denim Jacket, Trapped Specimen)
+  ctx.save();
+  ctx.translate(790, 1060);
+  drawMaya(ctx, 0, 0, 1.28, {
+    mood: 'scream',
+    pose: 'reach',
+    look: [-0.7, -0.1],
+    sweat: true,
+  });
+
+  // Defensive raised hands for Present Maya
+  ctx.fillStyle = '#f5d0b5';
+  ctx.beginPath(); ctx.arc(-60, -30, 16, 0, TAU); ctx.fill();
+  ctx.strokeStyle = INK; ctx.lineWidth = 3.5; ctx.stroke();
+  ctx.beginPath(); ctx.arc(-42, 0, 16, 0, TAU); ctx.fill();
+  ctx.stroke();
+  ctx.restore();
+
+  // Callout Arrows & Badges
+  drawArrowCallout(ctx, 390, 840, 290, 890, 'CHIEF SURGEON DR. CHEN', { dir: 'right', color: '#00e5ff' });
+  drawArrowCallout(ctx, 690, 840, 790, 890, 'PRESENT DAY MAYA', { dir: 'left', color: '#ff7043' });
+
+  // 3. MASTER HOOK HEADLINES (Inside 1:1 Instagram Grid Area y=420..1500)
+  // Hook Top Banner
+  rrPath(ctx, W / 2 - 380, 480, 760, 68, 16);
+  fillStroke(ctx, 'rgba(10, 15, 26, 0.94)', 4, PAL.gold);
+  ctx.font = '900 28px Inter, sans-serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillStyle = PAL.gold;
+  ctx.fillText('⚠ THE 1978 TEMPORAL PARADOX ⚠', W / 2, 514);
+
+  // Big Hero Hook Line 1
+  ctx.font = '900 58px Inter, sans-serif';
+  ctx.strokeStyle = INK; ctx.lineWidth = 14;
+  ctx.strokeText('LIFT ZAMEEN PAR NAHI...', W / 2, 600);
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText('LIFT ZAMEEN PAR NAHI...', W / 2, 600);
+
+  // Big Hero Hook Line 2 (Golden Embossed Glow)
+  ctx.font = '900 86px Inter, sans-serif';
+  ctx.strokeStyle = INK; ctx.lineWidth = 20;
+  ctx.strokeText('1978 MEIN UTRI!', W / 2, 695);
+  ctx.fillStyle = PAL.gold;
+  ctx.fillText('1978 MEIN UTRI!', W / 2, 695);
+
+  // Bottom Sub-Hook (y: 1360..1440)
+  rrPath(ctx, W / 2 - 440, 1370, 880, 72, 20);
+  fillStroke(ctx, 'rgba(15, 23, 42, 0.96)', 4, '#ff1744');
+  ctx.font = '900 32px Inter, sans-serif';
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText('SHIKAAR BHI MAYA... SHIKAARI BHI MAYA!', W / 2, 1406);
+
+  // 4. OUTER 9:16 VERTICAL HEADER & FOOTER (Reels & Shorts Vertical Framing)
+  // Top HUD Bar
+  drawTopHUD(ctx, { title: 'THE FREE LIFT • EPISODE 3' });
+  drawStamp(ctx, 70, 145, 'SEALED FILE', 'OCTOBER 1978', { color: '#00e5ff' });
+  drawStamp(ctx, 420, 145, 'TIME LOOP', 'PARADOX IDENTIFIED', { color: '#ffea00' });
+
+  // Bottom Interactive Voting Teaser (y: 1540..1760)
+  const drawChoiceBox = (x, y, w, h, title, sub, bg, border, tc) => {
+    rrPath(ctx, x, y, w, h, 18);
+    fillStroke(ctx, bg, 4, border);
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.font = '900 32px Inter, sans-serif';
+    ctx.fillStyle = tc;
+    ctx.fillText(title, x + w / 2, y + 36);
+    ctx.font = '700 18px Inter, sans-serif';
+    ctx.fillStyle = 'rgba(255,255,255,0.85)';
+    ctx.fillText(sub, x + w / 2, y + 74);
+  };
+
+  drawChoiceBox(80, 1540, 435, 110, '[A] HARVEST', 'Perform Autopsy To Live', 'rgba(4, 47, 46, 0.96)', '#00e5ff', '#00e5ff');
+  drawChoiceBox(565, 1540, 435, 110, '[B] BURN', 'Smash Breaker To Break Loop', 'rgba(69, 10, 10, 0.96)', '#ff3d00', '#ff3d00');
+
+  // Call to Action
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.font = '900 38px Inter, sans-serif';
+  ctx.strokeStyle = INK; ctx.lineWidth = 10;
+  ctx.strokeText('COMMENT "A" YA "B" TO WRITE FINALE!', W / 2, 1715);
+  ctx.fillStyle = PAL.gold;
+  ctx.fillText('COMMENT "A" YA "B" TO WRITE FINALE!', W / 2, 1715);
+
+  // Follow Pill at very bottom
+  rrPath(ctx, W / 2 - 240, 1770, 480, 52, 26);
+  fillStroke(ctx, 'rgba(15, 23, 42, 0.94)', 2.5, PAL.gold);
+  ctx.font = '900 22px Inter, sans-serif';
+  ctx.fillStyle = PAL.gold;
+  ctx.fillText('+ SUBSCRIBE FOR EPISODE 4', W / 2, 1796);
+
+  // 5. CINEMATIC POST-PROCESSING
+  vignette(ctx, 0.38);
+  filmGrainOverlay(ctx, 0.03);
+
+  window.COVER_READY = true;
+}
+
+renderCover();
+</script>
+</body>
+</html>

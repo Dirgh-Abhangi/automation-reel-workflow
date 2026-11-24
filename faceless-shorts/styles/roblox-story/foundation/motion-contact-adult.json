@@ -1,0 +1,11 @@
+{
+  "max_stance_slip": 0.0,
+  "max_ground_penetration": 0.0,
+  "max_grip_error": 1.3328003749250113e-07,
+  "max_link_length_error": 0.0004828269090129341,
+  "character": "adult_a",
+  "frames": 180,
+  "fps": 30,
+  "checks": "evaluated transforms and sole bounds at 359 half-frame samples; no whole-mesh collision test",
+  "approved": false
+}

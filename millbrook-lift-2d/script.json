@@ -1,0 +1,253 @@
+{
+  "title": "The Free Lift — Episode 1: 2:47 AM",
+  "lead": 0.45,
+  "outro": 1.2,
+  "default_gap": 0.35,
+  "music": "horror_score",
+  "lines": [
+    {
+      "id": 0,
+      "act": 1,
+      "character": "Narrator",
+      "text": "Twelve floors on every hospital blueprint.",
+      "caps": "12 *FLOORS | on every *blueprint.",
+      "speed": 0.92,
+      "gap": 0.25
+    },
+    {
+      "id": 1,
+      "act": 1,
+      "character": "Narrator",
+      "text": "Thirteen buttons inside the brass elevator.",
+      "caps": "*13 BUTTONS | in the brass *elevator.",
+      "speed": 0.90,
+      "gap": 0.35
+    },
+    {
+      "id": 2,
+      "act": 1,
+      "character": "Narrator",
+      "text": "Wait until you hear who it actually stops for.",
+      "caps": "WHO DOES IT | *ACTUALLY STOP *FOR?",
+      "speed": 0.88,
+      "gap": 0.55
+    },
+    {
+      "id": 3,
+      "act": 2,
+      "character": "Narrator",
+      "text": "For ninety-nine nights, Maya filmed empty hallways to prove ghosts weren't real.",
+      "caps": "*99 NIGHTS | filming empty *halls.",
+      "speed": 0.95,
+      "gap": 0.25
+    },
+    {
+      "id": 4,
+      "act": 2,
+      "character": "Narrator",
+      "text": "Just dust. Zero views. Zero ghosts.",
+      "caps": "*ZERO VIEWS. | *ZERO GHOSTS.",
+      "speed": 0.90,
+      "gap": 0.35
+    },
+    {
+      "id": 5,
+      "act": 2,
+      "character": "Narrator",
+      "text": "Until a leaked nurse's comment dared her into Millbrook Wing B... at two forty-seven AM.",
+      "caps": "A LEAKED *DARE: | MILLBROOK *WING B | at *2:47 AM.",
+      "speed": 0.92,
+      "gap": 0.50
+    },
+    {
+      "id": 6,
+      "act": 3,
+      "character": "Narrator",
+      "text": "Inside the locked lobby, she found three yellowed rules taped by the watchman.",
+      "caps": "SHE FOUND | THREE NIGHT *RULES.",
+      "speed": 0.92,
+      "gap": 0.35
+    },
+    {
+      "id": 7,
+      "act": 3,
+      "character": "Narrator",
+      "text": "Rule one: never enter an open morgue door.",
+      "caps": "RULE 1: | NEVER ENTER | AN *OPEN MORGUE.",
+      "speed": 0.90,
+      "gap": 0.40
+    },
+    {
+      "id": 8,
+      "act": 3,
+      "character": "Narrator",
+      "text": "Rule two: if the elevator moves alone, never look in the mirror.",
+      "caps": "RULE 2: | NEVER LOOK | IN THE *MIRROR.",
+      "speed": 0.90,
+      "gap": 0.40
+    },
+    {
+      "id": 9,
+      "act": 3,
+      "character": "Narrator",
+      "text": "Rule three: Floor thirteen was sealed in seventy-eight. If the speaker calls your name, do not answer.",
+      "caps": "RULE 3: | SEALED *1978. | *DO NOT *ANSWER.",
+      "speed": 0.88,
+      "gap": 0.65
+    },
+    {
+      "id": 10,
+      "act": 4,
+      "character": "Narrator",
+      "text": "Down the basement corridor, freezing air spilled through steel doors standing three inches ajar.",
+      "caps": "HEAVY DOORS | THREE INCHES *AJAR.",
+      "speed": 0.90,
+      "gap": 0.45
+    },
+    {
+      "id": 11,
+      "act": 4,
+      "character": "Maya",
+      "text": "Night one hundred... wait, why is the morgue door unlocked?",
+      "caps": "*NIGHT 100... | why is the *morgue *unlocked?",
+      "speed": 0.96,
+      "gap": 0.45
+    },
+    {
+      "id": 12,
+      "act": 4,
+      "character": "Narrator",
+      "text": "Maya crept closer... and pulled the cold brass bar.",
+      "caps": "SHE PULLED | THE *COLD BAR...",
+      "speed": 0.86,
+      "gap": 1.15
+    },
+    {
+      "id": 13,
+      "act": 4,
+      "character": "Narrator",
+      "text": "Her phone screen blinked once. One percent battery.",
+      "caps": "HER PHONE BLINKED: | *1% BATTERY.",
+      "speed": 0.90,
+      "gap": 0.35
+    },
+    {
+      "id": 14,
+      "act": 4,
+      "character": "Narrator",
+      "text": "Then... pitch black.",
+      "caps": "THEN... | *PITCH *BLACK.",
+      "speed": 0.82,
+      "gap": 0.70
+    },
+    {
+      "id": 15,
+      "act": 4,
+      "character": "Maya",
+      "text": "Hello? Is someone down here?",
+      "caps": "*HELLO?! | Is *someone down here?",
+      "speed": 0.95,
+      "gap": 0.45
+    },
+    {
+      "id": 16,
+      "act": 5,
+      "character": "Narrator",
+      "text": "Behind her, warm brass elevator doors rolled smoothly open. She stepped inside... and they slammed shut.",
+      "caps": "SHE STEPPED IN. | DOORS *SLAMMED *SHUT.",
+      "speed": 0.94,
+      "gap": 0.40
+    },
+    {
+      "id": 17,
+      "act": 5,
+      "character": "Narrator",
+      "text": "Floor one. Five. Twelve. Then she looked up at the mirror...",
+      "caps": "FLOOR 1... 5... *12. | SHE LOOKED IN *THE MIRROR...",
+      "speed": 0.86,
+      "gap": 1.25
+    },
+    {
+      "id": 18,
+      "act": 5,
+      "character": "Narrator",
+      "text": "And froze. Inside the glass, the elevator was completely empty.",
+      "caps": "THE MIRROR | WAS *COMPLETELY *EMPTY.",
+      "speed": 0.85,
+      "gap": 0.40
+    },
+    {
+      "id": 19,
+      "act": 5,
+      "character": "Maya",
+      "text": "Wait, where am I? Why can't I see myself?!",
+      "caps": "*WHERE AM I?! | Why can't I *see myself?!",
+      "speed": 1.02,
+      "gap": 0.50
+    },
+    {
+      "id": 20,
+      "act": 6,
+      "character": "DrWard",
+      "text": "Maya Chen. You were never supposed to find this. Welcome to Floor thirteen.",
+      "caps": "WARD: *MAYA CHEN. | WELCOME TO | *FLOOR 13.",
+      "speed": 0.88,
+      "gap": 0.65
+    },
+    {
+      "id": 21,
+      "act": 6,
+      "character": "Narrator",
+      "text": "The doors parted into endless darkness, revealing an old iron mailbox holding her own file... stamped deceased, nineteen seventy-eight.",
+      "caps": "ENDLESS *DARKNESS. | HER OWN FILE | STAMPED *DECEASED 1978.",
+      "speed": 0.90,
+      "gap": 0.55
+    },
+    {
+      "id": 22,
+      "act": 6,
+      "character": "Entity",
+      "text": "She's yours now.",
+      "caps": "*\"SHE'S YOURS *NOW.\"",
+      "speed": 0.78,
+      "gap": 0.45
+    },
+    {
+      "id": 23,
+      "act": 6,
+      "character": "Maya",
+      "text": "What... what's happening to my hands?!",
+      "caps": "WHAT'S HAPPENING | TO *MY HANDS?!",
+      "speed": 0.98,
+      "gap": 0.45
+    },
+    {
+      "id": 24,
+      "act": 6,
+      "character": "Narrator",
+      "text": "Behind her in the glass, hollow black eyes smiled back. That wasn't Maya.",
+      "caps": "*HOLLOW EYES | SMILED BACK. | THAT WASN'T *MAYA.",
+      "speed": 0.85,
+      "gap": 0.75
+    },
+    {
+      "id": 25,
+      "act": 7,
+      "character": "Narrator",
+      "text": "You're trapped on Floor thirteen. Do you sprint through the exit doors, or grab the glowing keycard?",
+      "caps": "SPRINT FOR *EXIT [A] | OR GRAB *KEYCARD [B]?",
+      "speed": 0.93,
+      "gap": 0.30
+    },
+    {
+      "id": 26,
+      "act": 7,
+      "character": "Narrator",
+      "text": "Comment A or B right now. Follow so you don't miss Part Two.",
+      "caps": "COMMENT *A OR B! | FOLLOW FOR *PART 2.",
+      "speed": 0.91,
+      "gap": 0.40
+    }
+  ]
+}
+

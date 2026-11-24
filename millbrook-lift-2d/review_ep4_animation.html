@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Free Lift — Episode 4: "The Paradox Shattered" 24fps Animation Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700;800;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #080c14;
+    color: #e2e8f0;
+    font-family: 'Mukta', system-ui, sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+  body.capture {
+    background: #000;
+    padding: 0;
+    justify-content: center;
+  }
+  body.capture .sidebar { display: none; }
+  body.capture #cv {
+    width: 1080px;
+    height: 1920px;
+    border-radius: 0;
+  }
+
+  /* Left Panel: Dynamic Canvas View */
+  .preview-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #111a2e 0%, #080d18 70%, #03050a 100%);
+    position: relative;
+    padding: 16px;
+    gap: 12px;
+  }
+  #cv {
+    height: 84vh;
+    width: auto;
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 229, 255, 0.25);
+    border: 3px solid rgba(255, 215, 0, 0.35);
+    background: #06080d;
+  }
+
+  /* Playback Control Bar */
+  .control-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 84vh;
+    max-width: 90%;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+  }
+  #play {
+    background: linear-gradient(135deg, #ffd54f 0%, #ff8f00 100%);
+    color: #0f172a;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 179, 0, 0.3);
+    transition: transform 0.1s, filter 0.2s;
+  }
+  #play:hover { filter: brightness(1.15); transform: translateY(-1px); }
+  #play:active { transform: translateY(1px); }
+
+  .scrubber-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  #scrubber {
+    width: 100%;
+    accent-color: #ffd54f;
+    cursor: pointer;
+  }
+  .time-readout {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #94a3b8;
+    font-family: monospace;
+  }
+  .current-time { color: #ffd54f; font-weight: 700; }
+
+  /* Right Sidebar: 20 Shots Navigation */
+  .sidebar {
+    width: 440px;
+    background: #0b1120;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .header {
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(180deg, #162035 0%, #0b1120 100%);
+  }
+  .series-tag {
+    font-size: 12px;
+    font-weight: 800;
+    color: #ffd54f;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #ffffff;
+    margin: 4px 0;
+  }
+  .sub-tag {
+    font-size: 13px;
+    color: #94a3b8;
+  }
+
+  .shots-list {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .shot-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  }
+  .shot-pill:hover {
+    background: rgba(51, 65, 85, 0.7);
+    border-color: rgba(255, 215, 0, 0.4);
+    transform: translateX(3px);
+  }
+  .shot-pill.active {
+    background: linear-gradient(90deg, rgba(0, 229, 255, 0.3) 0%, rgba(30, 41, 59, 0.8) 100%);
+    border-color: #ffd54f;
+    box-shadow: 0 0 16px rgba(0, 229, 255, 0.2);
+  }
+  .shot-id {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 900;
+    color: #ffd54f;
+    min-width: 38px;
+  }
+  .shot-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .shot-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1.3;
+  }
+  .shot-time {
+    font-size: 11px;
+    font-family: monospace;
+    color: #94a3b8;
+  }
+
+  /* Current Shot Card */
+  .current-card {
+    padding: 16px 20px;
+    background: #0f172a;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .card-label {
+    font-size: 11px;
+    color: #ffd54f;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .card-desc {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-panel">
+  <canvas id="cv" width="1080" height="1920"></canvas>
+  <div class="control-bar">
+    <button id="play">▶ PLAY REEL</button>
+    <div class="scrubber-wrap">
+      <input type="range" id="scrubber" min="0" max="95.00" step="0.04" value="0">
+      <div class="time-readout">
+        <span class="current-time" id="time-curr">00:00.00</span>
+        <span id="time-total">01:35.00 (95.0s)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sidebar">
+  <div class="header">
+    <div class="series-tag">THE 13TH FLOOR • EPISODE 4 FINALE</div>
+    <h1>The Paradox Shattered</h1>
+    <div class="sub-tag">24fps Animation Engine • 20 Shots Mapped</div>
+  </div>
+
+  <div class="shots-list" id="shots-list"></div>
+
+  <div class="current-card">
+    <div class="card-label" id="card-shot-id">CURRENT BEAT: S01</div>
+    <div class="card-desc" id="card-shot-desc">Dr. Maya drops scalpel — Choice [B] BURN initiated</div>
+  </div>
+</div>
+
+<script type="module">
+  if (new URLSearchParams(location.search).has('capture')) {
+    document.body.classList.add('capture');
+  }
+  import { buildDirectorEp4 } from './src/shots_ep4.js';
+  import { drawFrame, playAnimation, pauseAnimation, seekAnimation } from './src/main_ep4.js';
+
+  const dir = buildDirectorEp4();
+  const totalDur = dir.totalDur;
+  const scrubber = document.getElementById('scrubber');
+  const timeCurr = document.getElementById('time-curr');
+  const timeTotal = document.getElementById('time-total');
+  const shotsList = document.getElementById('shots-list');
+  const cardId = document.getElementById('card-shot-id');
+  const cardDesc = document.getElementById('card-shot-desc');
+
+  scrubber.max = totalDur;
+  timeTotal.textContent = `${fmtTime(totalDur)} (${totalDur.toFixed(1)}s)`;
+
+  function fmtTime(t) {
+    const m = Math.floor(t / 60);
+    const s = Math.floor(t % 60);
+    const ms = Math.floor((t % 1) * 100);
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}.${String(ms).padStart(2, '0')}`;
+  }
+
+  // Populate 20 Shot Navigation Pills
+  dir.shots.forEach((s, idx) => {
+    const pill = document.createElement('div');
+    pill.className = `shot-pill ${idx === 0 ? 'active' : ''}`;
+    pill.dataset.at = s.at;
+    pill.dataset.idx = idx;
+
+    pill.innerHTML = `
+      <div class="shot-id">${s.id}</div>
+      <div class="shot-info">
+        <div class="shot-title">${s.note}</div>
+        <div class="shot-time">${fmtTime(s.at)} → ${fmtTime(s.at + s.d)} (${s.d}s)</div>
+      </div>
+    `;
+
+    pill.onclick = () => {
+      seekAnimation(s.at);
+    };
+
+    shotsList.appendChild(pill);
+  });
+
+  // Timeupdate Listener from main_ep4.js
+  window.addEventListener('timeupdate', (e) => {
+    const t = e.detail.t;
+    scrubber.value = t;
+    timeCurr.textContent = fmtTime(t);
+
+    // Update active pill
+    let activeIdx = 0;
+    for (let i = dir.shots.length - 1; i >= 0; i--) {
+      if (t >= dir.shots[i].at) {
+        activeIdx = i;
+        break;
+      }
+    }
+
+    const pills = shotsList.querySelectorAll('.shot-pill');
+    pills.forEach((p, i) => {
+      if (i === activeIdx) {
+        p.classList.add('active');
+        cardId.textContent = `CURRENT BEAT: ${dir.shots[i].id}`;
+        cardDesc.textContent = dir.shots[i].note;
+      } else {
+        p.classList.remove('active');
+      }
+    });
+  });
+
+  // Scrubber user interaction
+  scrubber.oninput = () => {
+    const t = parseFloat(scrubber.value);
+    seekAnimation(t);
+  };
+
+  // Keyboard navigation
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') {
+      e.preventDefault();
+      document.getElementById('play').click();
+    } else if (e.code === 'ArrowRight') {
+      seekAnimation(parseFloat(scrubber.value) + 1.0);
+    } else if (e.code === 'ArrowLeft') {
+      seekAnimation(parseFloat(scrubber.value) - 1.0);
+    }
+  });
+
+  // Ready signal
+  window.__ANIM_READY = true;
+</script>
+
+</body>
+</html>

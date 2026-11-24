@@ -1,0 +1,32 @@
+{
+  "stage": "new-style-visual-proof",
+  "production_approved": false,
+  "reference_analysis": "108 overview + 96 dense samples from 9 distinct clips; audio not reviewed",
+  "implemented": [
+    "original SVG corridor and single character",
+    "two hair silhouettes and four character colors",
+    "three expressions",
+    "four fixed shot templates",
+    "camera push, blink, slight head motion, foreground reach",
+    "screen-locked HUD and emphasized captions",
+    "SVG rasterization and silent FFmpeg preview"
+  ],
+  "missing": [
+    "visual parity with reference",
+    "fully customizable cast and character angles",
+    "detailed environments and pets",
+    "general actions and props",
+    "true depth-parameterized layer compositor",
+    "voice alignment and sound design",
+    "continuous playback acceptance",
+    "target low-cost model evaluation"
+  ],
+  "scope": "new route only; existing eight styles unchanged",
+  "verification": {
+    "default_preview": "8 seconds, 240 frames, 360\u00d7640, 30 fps; decoded without errors",
+    "forward_case": "day palette, bob hair, teal coat, worried reaction: four 720\u00d71280 stills rendered and inspected",
+    "day_correction": "reduced day vignette and applied day colors to choice background; daylight fidelity remains unapproved",
+    "tests": "valid customizations and unsupported capability rejection pass",
+    "playback": "frame/keyframe inspection only; real-time perceptual review not claimed"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "phase": 1,
+  "status": "proof-assets-created-not-visually-approved",
+  "reference_families": [
+    "warm domestic horror",
+    "bright ensemble stories",
+    "clinical interiors",
+    "neon supernatural"
+  ],
+  "gates": {
+    "build_and_export": "passed",
+    "first_still_render": "passed",
+    "reference_character_similarity": "pending refinement",
+    "independent_character_families": "partial",
+    "expression_transitions": "proof keyframes implemented; rendered poses checked; continuous playback pending",
+    "foot_and_prop_contacts": "walk/reach/lift proof; evaluated half-frame checks pass for adult_a and child; general collisions and other actions pending",
+    "cinematic_camera_studies": "two-shot walk/reach proof implemented; final visual acceptance pending",
+    "target_model_evaluation": "not run",
+    "complete_video_generation": "not approved",
+    "character_multiangle_studies": "adult_a front/side/back/three-quarter checked; other families pending",
+    "continuous_motion": "180-frame silent diagnostic rendered; evaluated half-frame contact checks passed; keyframe sequences inspected; perceptual playback and final quality not approved"
+  },
+  "proof_assets": [
+    "character_lab.glb",
+    "character_lab.png",
+    "character_studies.jpg",
+    "studies/",
+    "motion_preview.mp4",
+    "motion-contact-adult.json",
+    "motion-contact-child.json"
+  ],
+  "voice": "external input; not a phase-one priority"
+}

@@ -1,0 +1,248 @@
+{
+ "duration": 120.246,
+ "lines": [
+  {
+   "i": 0,
+   "act": 1,
+   "character": "Narrator",
+   "text": "Twelve floors on every hospital blueprint.",
+   "start": 0.45,
+   "end": 2.985,
+   "caps": "12 *FLOORS | on every *blueprint."
+  },
+  {
+   "i": 1,
+   "act": 1,
+   "character": "Narrator",
+   "text": "Thirteen buttons inside the brass elevator.",
+   "start": 3.235,
+   "end": 6.09,
+   "caps": "*13 BUTTONS | in the brass *elevator."
+  },
+  {
+   "i": 2,
+   "act": 1,
+   "character": "Narrator",
+   "text": "Wait until you hear who it actually stops for.",
+   "start": 6.439,
+   "end": 9.149,
+   "caps": "WHO DOES IT | *ACTUALLY STOP *FOR?"
+  },
+  {
+   "i": 3,
+   "act": 2,
+   "character": "Narrator",
+   "text": "For ninety-nine nights, Maya filmed empty hallways to prove ghosts weren't real.",
+   "start": 9.699,
+   "end": 14.219,
+   "caps": "*99 NIGHTS | filming empty *halls."
+  },
+  {
+   "i": 4,
+   "act": 2,
+   "character": "Narrator",
+   "text": "Just dust. Zero views. Zero ghosts.",
+   "start": 14.469,
+   "end": 17.042,
+   "caps": "*ZERO VIEWS. | *ZERO GHOSTS."
+  },
+  {
+   "i": 5,
+   "act": 2,
+   "character": "Narrator",
+   "text": "Until a leaked nurse's comment dared her into Millbrook Wing B... at two forty-seven AM.",
+   "start": 17.392,
+   "end": 22.748,
+   "caps": "A LEAKED *DARE: | MILLBROOK *WING B | at *2:47 AM."
+  },
+  {
+   "i": 6,
+   "act": 3,
+   "character": "Narrator",
+   "text": "Inside the locked lobby, she found three yellowed rules taped by the watchman.",
+   "start": 23.248,
+   "end": 27.648,
+   "caps": "SHE FOUND | THREE NIGHT *RULES."
+  },
+  {
+   "i": 7,
+   "act": 3,
+   "character": "Narrator",
+   "text": "Rule one: never enter an open morgue door.",
+   "start": 27.998,
+   "end": 30.786,
+   "caps": "RULE 1: | NEVER ENTER | AN *OPEN MORGUE."
+  },
+  {
+   "i": 8,
+   "act": 3,
+   "character": "Narrator",
+   "text": "Rule two: if the elevator moves alone, never look in the mirror.",
+   "start": 31.186,
+   "end": 34.862,
+   "caps": "RULE 2: | NEVER LOOK | IN THE *MIRROR."
+  },
+  {
+   "i": 9,
+   "act": 3,
+   "character": "Narrator",
+   "text": "Rule three: Floor thirteen was sealed in seventy-eight. If the speaker calls your name, do not answer.",
+   "start": 35.262,
+   "end": 40.963,
+   "caps": "RULE 3: | SEALED *1978. | *DO NOT *ANSWER."
+  },
+  {
+   "i": 10,
+   "act": 4,
+   "character": "Narrator",
+   "text": "Down the basement corridor, freezing air spilled through steel doors standing three inches ajar.",
+   "start": 41.613,
+   "end": 46.927,
+   "caps": "HEAVY DOORS | THREE INCHES *AJAR."
+  },
+  {
+   "i": 11,
+   "act": 4,
+   "character": "Maya",
+   "text": "Night one hundred... wait, why is the morgue door unlocked?",
+   "start": 47.377,
+   "end": 52.607,
+   "caps": "*NIGHT 100... | why is the *morgue *unlocked?"
+  },
+  {
+   "i": 12,
+   "act": 4,
+   "character": "Narrator",
+   "text": "Maya crept closer... and pulled the cold brass bar.",
+   "start": 53.057,
+   "end": 56.316,
+   "caps": "SHE PULLED | THE *COLD BAR..."
+  },
+  {
+   "i": 13,
+   "act": 4,
+   "character": "Narrator",
+   "text": "Her phone screen blinked once. One percent battery.",
+   "start": 57.466,
+   "end": 60.644,
+   "caps": "HER PHONE BLINKED: | *1% BATTERY."
+  },
+  {
+   "i": 14,
+   "act": 4,
+   "character": "Narrator",
+   "text": "Then... pitch black.",
+   "start": 60.994,
+   "end": 62.459,
+   "caps": "THEN... | *PITCH *BLACK."
+  },
+  {
+   "i": 15,
+   "act": 4,
+   "character": "Maya",
+   "text": "Hello? Is someone down here?",
+   "start": 63.159,
+   "end": 65.255,
+   "caps": "*HELLO?! | Is *someone down here?"
+  },
+  {
+   "i": 16,
+   "act": 5,
+   "character": "Narrator",
+   "text": "Behind her, warm brass elevator doors rolled smoothly open. She stepped inside... and they slammed shut.",
+   "start": 65.705,
+   "end": 71.853,
+   "caps": "SHE STEPPED IN. | DOORS *SLAMMED *SHUT."
+  },
+  {
+   "i": 17,
+   "act": 5,
+   "character": "Narrator",
+   "text": "Floor one. Five. Twelve. Then she looked up at the mirror...",
+   "start": 72.253,
+   "end": 75.603,
+   "caps": "FLOOR 1... 5... *12. | SHE LOOKED IN *THE MIRROR..."
+  },
+  {
+   "i": 18,
+   "act": 5,
+   "character": "Narrator",
+   "text": "And froze. Inside the glass, the elevator was completely empty.",
+   "start": 76.853,
+   "end": 80.918,
+   "caps": "THE MIRROR | WAS *COMPLETELY *EMPTY."
+  },
+  {
+   "i": 19,
+   "act": 5,
+   "character": "Maya",
+   "text": "Wait, where am I? Why can't I see myself?!",
+   "start": 81.318,
+   "end": 84.927,
+   "caps": "*WHERE AM I?! | Why can't I *see myself?!"
+  },
+  {
+   "i": 20,
+   "act": 6,
+   "character": "DrWard",
+   "text": "Maya Chen. You were never supposed to find this. Welcome to Floor thirteen.",
+   "start": 85.427,
+   "end": 90.728,
+   "caps": "WARD: *MAYA CHEN. | WELCOME TO | *FLOOR 13."
+  },
+  {
+   "i": 21,
+   "act": 6,
+   "character": "Narrator",
+   "text": "The doors parted into endless darkness, revealing an old iron mailbox holding her own file... stamped deceased, nineteen seventy-eight.",
+   "start": 91.378,
+   "end": 99.164,
+   "caps": "ENDLESS *DARKNESS. | HER OWN FILE | STAMPED *DECEASED 1978."
+  },
+  {
+   "i": 22,
+   "act": 6,
+   "character": "Entity",
+   "text": "She's yours now.",
+   "start": 99.714,
+   "end": 101.324,
+   "caps": "*\"SHE'S YOURS *NOW.\""
+  },
+  {
+   "i": 23,
+   "act": 6,
+   "character": "Maya",
+   "text": "What... what's happening to my hands?!",
+   "start": 101.774,
+   "end": 103.891,
+   "caps": "WHAT'S HAPPENING | TO *MY HANDS?!"
+  },
+  {
+   "i": 24,
+   "act": 6,
+   "character": "Narrator",
+   "text": "Behind her in the glass, hollow black eyes smiled back. That wasn't Maya.",
+   "start": 104.341,
+   "end": 108.948,
+   "caps": "*HOLLOW EYES | SMILED BACK. | THAT WASN'T *MAYA."
+  },
+  {
+   "i": 25,
+   "act": 7,
+   "character": "Narrator",
+   "text": "You're trapped on Floor thirteen. Do you sprint through the exit doors, or grab the glowing keycard?",
+   "start": 109.698,
+   "end": 114.76,
+   "caps": "SPRINT FOR *EXIT [A] | OR GRAB *KEYCARD [B]?"
+  },
+  {
+   "i": 26,
+   "act": 7,
+   "character": "Narrator",
+   "text": "Comment A or B right now. Follow so you don't miss Part Two.",
+   "start": 115.06,
+   "end": 118.646,
+   "caps": "COMMENT *A OR B! | FOLLOW FOR *PART 2."
+  }
+ ]
+}

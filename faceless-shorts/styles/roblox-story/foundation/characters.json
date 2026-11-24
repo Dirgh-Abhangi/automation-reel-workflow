@@ -1,0 +1,6 @@
+[
+ {"id":"adult_a","label":"ADULT A","scale":1,"skin":[0.62,0.34,0.19],"shirt":[0.055,0.19,0.23],"hair":[0.035,0.023,0.018],"long_hair":false,"glasses":false},
+ {"id":"adult_b","label":"ADULT B","scale":0.97,"skin":[0.78,0.51,0.32],"shirt":[0.38,0.095,0.15],"hair":[0.065,0.03,0.022],"long_hair":true,"glasses":false},
+ {"id":"older","label":"OLDER ADULT","scale":0.94,"skin":[0.69,0.46,0.32],"shirt":[0.24,0.29,0.19],"hair":[0.58,0.59,0.55],"long_hair":false,"glasses":true},
+ {"id":"child","label":"CHILD STUDY","scale":0.7,"skin":[0.77,0.51,0.3],"shirt":[0.63,0.31,0.08],"hair":[0.13,0.065,0.025],"long_hair":false,"glasses":false}
+]

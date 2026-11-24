@@ -1,0 +1,205 @@
+{
+ "duration": 161.055,
+ "cues": [
+  {
+   "t": 0.05,
+   "type": "whoosh",
+   "gain": 0.7
+  },
+  {
+   "t": 7.429,
+   "type": "chime"
+  },
+  {
+   "t": 13.658,
+   "type": "chime",
+   "gain": 0.75
+  },
+  {
+   "t": 15.179,
+   "type": "whoosh"
+  },
+  {
+   "t": 15.259,
+   "type": "ping"
+  },
+  {
+   "t": 22.247,
+   "type": "stamp",
+   "gain": 0.85
+  },
+  {
+   "t": 27.164,
+   "type": "chain"
+  },
+  {
+   "t": 30.728,
+   "type": "whoosh"
+  },
+  {
+   "t": 30.828,
+   "type": "page"
+  },
+  {
+   "t": 36.582,
+   "type": "write"
+  },
+  {
+   "t": 42.076,
+   "type": "write"
+  },
+  {
+   "t": 47.941,
+   "type": "write"
+  },
+  {
+   "t": 56.841,
+   "type": "stamp"
+  },
+  {
+   "t": 57.868,
+   "type": "whoosh"
+  },
+  {
+   "t": 58.468,
+   "type": "footstep",
+   "pan": -0.2
+  },
+  {
+   "t": 59.368,
+   "type": "footstep",
+   "pan": 0.15
+  },
+  {
+   "t": 60.268,
+   "type": "footstep",
+   "pan": -0.1
+  },
+  {
+   "t": 69.577,
+   "type": "silence_drop",
+   "dur": 6.706000000000003
+  },
+  {
+   "t": 70.027,
+   "type": "creak",
+   "dur": 6.106000000000003
+  },
+  {
+   "t": 70.927,
+   "type": "stamp",
+   "gain": 0.7
+  },
+  {
+   "t": 77.563,
+   "type": "batt_warn"
+  },
+  {
+   "t": 83.099,
+   "type": "riser",
+   "dur": 1.08
+  },
+  {
+   "t": 84.149,
+   "type": "power_cut"
+  },
+  {
+   "t": 84.199,
+   "type": "doom"
+  },
+  {
+   "t": 88.093,
+   "type": "chime",
+   "gain": 0.65
+  },
+  {
+   "t": 93.423,
+   "type": "slam"
+  },
+  {
+   "t": 94.756,
+   "type": "dial_tick"
+  },
+  {
+   "t": 96.276,
+   "type": "dial_tick"
+  },
+  {
+   "t": 97.696,
+   "type": "dial_tick"
+  },
+  {
+   "t": 102.997,
+   "type": "silence_drop",
+   "dur": 1.45
+  },
+  {
+   "t": 103.117,
+   "type": "riser",
+   "dur": 0.82
+  },
+  {
+   "t": 103.967,
+   "type": "sting"
+  },
+  {
+   "t": 113.89,
+   "type": "squelch"
+  },
+  {
+   "t": 114.09,
+   "type": "type_tick",
+   "dur": 2.2
+  },
+  {
+   "t": 114.19,
+   "type": "alarm",
+   "dur": 3,
+   "gain": 0.5
+  },
+  {
+   "t": 119.888,
+   "type": "door_grind",
+   "dur": 1.5
+  },
+  {
+   "t": 125.768,
+   "type": "thud"
+  },
+  {
+   "t": 130.548,
+   "type": "stamp"
+  },
+  {
+   "t": 130.548,
+   "type": "chime"
+  },
+  {
+   "t": 132.359,
+   "type": "doom",
+   "gain": 0.65
+  },
+  {
+   "t": 144.063,
+   "type": "riser",
+   "dur": 0.92
+  },
+  {
+   "t": 145.013,
+   "type": "sting"
+  },
+  {
+   "t": 145.013,
+   "type": "stamp"
+  },
+  {
+   "t": 147.159,
+   "type": "whoosh"
+  },
+  {
+   "t": 147.459,
+   "type": "heartbeat",
+   "dur": 13.396000000000015
+  }
+ ]
+}

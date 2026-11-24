@@ -1,0 +1,59 @@
+{
+ "duration": 24.673,
+ "cues": [
+  {
+   "t": 0.05,
+   "type": "whoosh"
+  },
+  {
+   "t": 1.49,
+   "type": "pop"
+  },
+  {
+   "t": 4.595,
+   "type": "pop"
+  },
+  {
+   "t": 8.532,
+   "type": "portal"
+  },
+  {
+   "t": 9.756,
+   "type": "glitch"
+  },
+  {
+   "t": 10.884,
+   "type": "ding",
+   "gain": 1.25
+  },
+  {
+   "t": 13.276,
+   "type": "whoosh"
+  },
+  {
+   "t": 14.67,
+   "type": "slam"
+  },
+  {
+   "t": 17.338,
+   "type": "ding"
+  },
+  {
+   "t": 18.798,
+   "type": "whoosh"
+  },
+  {
+   "t": 19.587,
+   "type": "slam",
+   "gain": 1.15
+  },
+  {
+   "t": 19.667,
+   "type": "boing"
+  },
+  {
+   "t": 21.806,
+   "type": "cheer"
+  }
+ ]
+}

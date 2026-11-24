@@ -1,0 +1,18 @@
+{
+  "stage": "completed-master-delivered",
+  "story_selected": "Barbarika & The 3 Arrows (बर्बरीक के तीन बाण)",
+  "brief_validated": true,
+  "visual_approval": true,
+  "total_shots": 10,
+  "duration_seconds": 99.26,
+  "resolution": "1080x1920",
+  "fps": 30,
+  "audio": {
+    "voice": "hm_omega",
+    "language": "hi",
+    "master_mix": "barbarika-detailed-2d/data/master_mix.wav"
+  },
+  "master_video": "barbarika-detailed-2d/renders/barbarika_master_1080p.mp4",
+  "contact_sheet": "barbarika-detailed-2d/renders/sheet_barbarika_master.jpg",
+  "status": "ready"
+}

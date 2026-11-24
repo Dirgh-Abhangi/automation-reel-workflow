@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Free Lift — Ep 1 Cover Page</title>
+<style>
+  @font-face { font-family: 'Inter'; font-weight: 900; src: url('fonts/Inter-Black.otf'); }
+  @font-face { font-family: 'FreeMono'; font-weight: 700; src: url('fonts/FreeMonoBold.ttf'); }
+  html, body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; }
+  canvas { display: block; width: 1080px; height: 1920px; }
+</style>
+</head>
+<body>
+<canvas id="cv" width="1080" height="1920"></canvas>
+<script type="module">
+import { W, H, PAL, INK, TAU, rrPath, radGrad, linGrad, fillStroke, vignette, filmGrainOverlay } from './src/palette.js';
+import { drawStamp } from './src/hud.js';
+import { drawMaya } from './src/chars.js';
+import { drawElevatorCab } from './src/sets.js';
+
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+
+async function renderCover() {
+  await document.fonts.ready;
+
+  // 1. Dramatic Elevator Cab #13 Void backdrop (dial sits proudly inside top header at y=250..365!)
+  ctx.save();
+  ctx.translate(0, 0);
+  drawElevatorCab(ctx, {
+    floorText: '13',
+    needlePos: 3.5,
+    doorsSplit: 0.72,
+    redAlert: true,
+    voidOut: false,
+    motionLines: false,
+  });
+  ctx.restore();
+
+  // Deep dramatic crimson/midnight vignette framing behind title top & bottom feed bars
+  ctx.fillStyle = linGrad(ctx, 0, 0, 0, H, [
+    [0, 'rgba(6, 9, 17, 0.96)'],
+    [0.22, 'rgba(18, 8, 12, 0.62)'],
+    [0.52, 'rgba(10, 6, 10, 0.25)'],
+    [0.80, 'rgba(14, 7, 10, 0.78)'],
+    [1, 'rgba(6, 8, 13, 0.98)'],
+  ]);
+  ctx.fillRect(0, 0, W, H);
+
+  // Subtle icy-blue rim halo behind Maya (left foreground) vs crimson warning glow behind Floor 13 twin (right)
+  ctx.fillStyle = radGrad(ctx, 315, 1060, 20, 320, [
+    [0, 'rgba(86, 204, 242, 0.24)'],
+    [1, 'rgba(0,0,0,0)'],
+  ]);
+  ctx.beginPath();
+  ctx.arc(315, 1060, 320, 0, TAU);
+  ctx.fill();
+
+  ctx.fillStyle = radGrad(ctx, 735, 980, 20, 340, [
+    [0, 'rgba(228, 50, 43, 0.34)'],
+    [1, 'rgba(0,0,0,0)'],
+  ]);
+  ctx.beginPath();
+  ctx.arc(735, 980, 340, 0, TAU);
+  ctx.fill();
+
+  // 2. Hero Characters Inside 1:1 Center Square (y: 420..1500):
+  // Back-right looming Doppelganger emerging through parted Floor 13 doors!
+  ctx.save();
+  ctx.globalAlpha = 0.92;
+  drawMaya(ctx, 725, 1015, 0.94, {
+    isDoppel: true,
+    pose: 'idle',
+    grinScale: 1.12,
+  });
+  ctx.restore();
+
+  // Front-left Maya horrified, holding glowing blue 1% phone, glancing nervously forward
+  drawMaya(ctx, 325, 1105, 0.94, {
+    mood: 'shock',
+    pose: 'stand_phone',
+    look: [-0.35, -0.05],
+    sweat: true,
+  });
+
+  // Dramatic red evidence sticker angled neatly near Doppelganger hip (zero face overlap!)
+  drawStamp(ctx, {
+    text: 'NOT MAYA?!',
+    x: 805,
+    y: 1215,
+    rot: -0.08,
+    bg: PAL.crimson,
+    fg: '#FFFFFF',
+    size: 30,
+    scale: 1,
+  });
+
+  // 3. TOP SAFE-ZONE COVER TYPOGRAPHY (starts y=445 right inside Instagram 1:1 grid top!)
+  // Pill tag above title:
+  ctx.font = '900 26px Inter, sans-serif';
+  const subTxt = 'MILLBROOK WING B  •  02:47 AM';
+  const pw = ctx.measureText(subTxt).width + 64;
+  rrPath(ctx, (W - pw) / 2, 438, pw, 48, 24);
+  fillStroke(ctx, 'rgba(13, 16, 23, 0.94)', 3.5, PAL.gold);
+  ctx.fillStyle = PAL.gold;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(subTxt, W / 2, 464);
+
+  // Massive high-impact cover title ("THE FREE LIFT") visible even at tiny grid thumbnail size
+  const drawPosterText = (txt, x, y, fontPx, fillCol, strokeW = 14) => {
+    ctx.save();
+    ctx.font = `900 ${fontPx}px Inter, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.lineJoin = 'round';
+    ctx.shadowColor = 'rgba(0,0,0,0.85)';
+    ctx.shadowBlur = 18;
+    ctx.shadowOffsetY = 8;
+    ctx.strokeStyle = '#090B10';
+    ctx.lineWidth = strokeW;
+    ctx.strokeText(txt, x, y);
+    ctx.shadowColor = 'transparent';
+    ctx.fillStyle = fillCol;
+    ctx.fillText(txt, x, y);
+    ctx.restore();
+  };
+
+  drawPosterText('THE FREE LIFT', W / 2, 575, 118, '#FFFFFF', 18);
+
+  // Red "EPISODE 1: FLOOR 13" accent strip below main title
+  rrPath(ctx, W / 2 - 255, 650, 510, 52, 12);
+  fillStroke(ctx, PAL.crimson, 4.5, INK);
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = '900 30px Inter, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('EPISODE 1  •  FLOOR 13', W / 2, 678);
+
+  // 4. BOTTOM OF 1:1 GRID HOOK BAR (y = 1350..1465)
+  ctx.fillStyle = linGrad(ctx, 0, 1280, 0, 1520, [
+    [0, 'rgba(8, 10, 16, 0)'],
+    [0.35, 'rgba(8, 10, 16, 0.88)'],
+    [1, 'rgba(8, 10, 16, 0.96)'],
+  ]);
+  ctx.fillRect(0, 1280, W, 260);
+
+  rrPath(ctx, 74, 1348, W - 148, 108, 18);
+  fillStroke(ctx, 'rgba(16, 20, 29, 0.95)', 4, PAL.gold);
+  ctx.font = '900 34px Inter, sans-serif';
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fillText('12 FLOORS ON THE MAP.', W / 2, 1384);
+  ctx.fillStyle = PAL.gold;
+  ctx.fillText('13 BUTTONS INSIDE.', W / 2, 1426);
+
+  // 5. OUTER 9:16 VERTICAL HEADER & FOOTER (Adds extra hook above/below 1:1 square in Reels/Shorts!)
+  ctx.font = '900 30px Inter, sans-serif';
+  ctx.fillStyle = '#FF9C96';
+  ctx.fillText('SEALED ARCHIVE • 1978', W / 2, 130);
+  ctx.font = '900 22px FreeMono, monospace';
+  ctx.fillStyle = '#9CB2C9';
+  ctx.fillText('RULE 2: NEVER LOOK IN THE MIRROR', W / 2, 178);
+
+  // Bottom vertical poll tease (y=1580..1780)
+  rrPath(ctx, 90, 1565, 420, 96, 18);
+  fillStroke(ctx, 'rgba(14, 34, 46, 0.95)', 4, PAL.cyan);
+  ctx.fillStyle = PAL.cyan;
+  ctx.font = '900 32px Inter, sans-serif';
+  ctx.fillText('EXIT [A]', 300, 1602);
+  ctx.fillStyle = '#CBEAF5';
+  ctx.font = '700 22px FreeMono, monospace';
+  ctx.fillText('SPRINT OUT', 300, 1638);
+
+  rrPath(ctx, 570, 1565, 420, 96, 18);
+  fillStroke(ctx, 'rgba(48, 14, 18, 0.95)', 4, PAL.crimson);
+  ctx.fillStyle = '#FF7E78';
+  ctx.font = '900 32px Inter, sans-serif';
+  ctx.fillText('KEYCARD [B]', 780, 1602);
+  ctx.fillStyle = '#FFD3D0';
+  ctx.font = '700 22px FreeMono, monospace';
+  ctx.fillText('CLAIM ACCESS', 780, 1638);
+
+  ctx.fillStyle = '#E5EAEF';
+  ctx.font = '900 26px Inter, sans-serif';
+  ctx.fillText('WATCH TILL THE END  —  YOUR VOTE WRITES PART 2', W / 2, 1732);
+
+  vignette(ctx, 0.34);
+  filmGrainOverlay(ctx, 0.025);
+  window.COVER_READY = true;
+}
+
+renderCover();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+{
+ "duration": 24.673,
+ "voice": "am_fenrir",
+ "speed": 1.08,
+ "lines": [
+  {
+   "i": 0,
+   "text": "In this town, whatever number floats over your head",
+   "start": 0.25,
+   "end": 2.998
+  },
+  {
+   "i": 1,
+   "text": "decides how strong your shadow twin will be.",
+   "start": 2.998,
+   "end": 5.398
+  },
+  {
+   "i": 2,
+   "text": "The morning Leo turned eighteen, the whole sky went red,",
+   "start": 5.598,
+   "end": 8.888
+  },
+  {
+   "i": 3,
+   "text": "and his counter glitched all the way to nine thousand nine hundred ninety nine!",
+   "start": 9.018,
+   "end": 12.7
+  },
+  {
+   "i": 4,
+   "text": "And what stepped out of the portal wasn't a twin.",
+   "start": 12.9,
+   "end": 14.92
+  },
+  {
+   "i": 5,
+   "text": "Wait, why did it come with a giant glowing snooze button?",
+   "start": 15.1,
+   "end": 17.837
+  },
+  {
+   "i": 6,
+   "text": "So Leo didn't run away,",
+   "start": 18.037,
+   "end": 19.277
+  },
+  {
+   "i": 7,
+   "text": "he booped it right on the chest!",
+   "start": 19.437,
+   "end": 20.931
+  },
+  {
+   "i": 8,
+   "text": "Always read the fine print before turning eighteen.",
+   "start": 21.171,
+   "end": 23.613
+  }
+ ]
+}

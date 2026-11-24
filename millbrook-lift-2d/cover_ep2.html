@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Free Lift — Ep 2 Cover Page</title>
+<style>
+  @font-face { font-family: 'Inter'; font-weight: 900; src: url('fonts/Inter-Black.otf'); }
+  @font-face { font-family: 'FreeMono'; font-weight: 700; src: url('fonts/FreeMonoBold.ttf'); }
+  html, body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; }
+  canvas { display: block; width: 1080px; height: 1920px; }
+</style>
+</head>
+<body>
+<canvas id="cv" width="1080" height="1920"></canvas>
+<script type="module">
+import { W, H, PAL, INK, TAU, rrPath, radGrad, linGrad, fillStroke, vignette, filmGrainOverlay } from './src/palette.js';
+import { drawStamp, drawTopHUD, drawArrowCallout } from './src/hud.js';
+import { drawMaya } from './src/chars.js';
+import { drawAutopsyWardSet, drawCryoChamberWithEntity } from './src/keyframes_ep2.js';
+
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+
+async function renderCover() {
+  await document.fonts.ready;
+
+  // 1. BASE SET: Autopsy Ward & Morgue Room with Emergency Red Alert
+  drawAutopsyWardSet(ctx, { redAlert: true });
+
+  // Deep clinical midnight gradient backdrop to pop characters and text
+  ctx.fillStyle = linGrad(ctx, 0, 0, 0, H, [
+    [0, 'rgba(5, 8, 14, 0.96)'],
+    [0.20, 'rgba(12, 6, 10, 0.72)'],
+    [0.50, 'rgba(8, 14, 20, 0.35)'],
+    [0.82, 'rgba(14, 6, 10, 0.85)'],
+    [1, 'rgba(5, 7, 12, 0.98)'],
+  ]);
+  ctx.fillRect(0, 0, W, H);
+
+  // Atmospheric Radial Lighting:
+  // Toxic cyan-green biohazard halo behind the Cryo-Chamber
+  ctx.fillStyle = radGrad(ctx, 730, 940, 40, 440, [
+    [0, 'rgba(0, 230, 118, 0.32)'],
+    [0.45, 'rgba(0, 176, 255, 0.22)'],
+    [1, 'rgba(0,0,0,0)'],
+  ]);
+  ctx.beginPath();
+  ctx.arc(730, 940, 440, 0, TAU);
+  ctx.fill();
+
+  // Ominous crimson warning spotlight from overhead
+  ctx.fillStyle = radGrad(ctx, 330, 1060, 30, 360, [
+    [0, 'rgba(255, 23, 68, 0.30)'],
+    [1, 'rgba(0,0,0,0)'],
+  ]);
+  ctx.beginPath();
+  ctx.arc(330, 1060, 360, 0, TAU);
+  ctx.fill();
+
+  // 2. HERO SET PIECE: The Giant Stasis Pod (Cryo Chamber #1308) with Corpse Inside
+  ctx.save();
+  drawCryoChamberWithEntity(ctx, 750, 930, 1.28, { glassBroken: false });
+  ctx.restore();
+
+  // Dramatic spiderweb stress fractures on glass + escaping nitrogen chemical vapor
+  ctx.save();
+  ctx.translate(680, 940);
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.88)';
+  ctx.lineWidth = 3.5;
+  for (let c = 0; c < 8; c++) {
+    const a = (c / 8) * TAU + 0.2;
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(Math.cos(a) * 110, Math.sin(a) * 110);
+    ctx.stroke();
+  }
+
+  // Escaping green toxic chemical spray
+  ctx.fillStyle = '#00e676';
+  [
+    [-45, -35, 10], [-25, -60, 7], [-70, 20, 11], [-50, 45, 8], [-30, 70, 9]
+  ].forEach(([sx, sy, sr]) => {
+    ctx.beginPath();
+    ctx.arc(sx, sy, sr, 0, TAU);
+    ctx.fill();
+  });
+
+  // Dramatic pale corpse arm bursting forward from inside the fractured tank!
+  ctx.save();
+  ctx.translate(-40, 10);
+  ctx.rotate(-0.12);
+  // Forearm
+  ctx.fillStyle = '#78909c';
+  ctx.strokeStyle = INK;
+  ctx.lineWidth = 4.5;
+  ctx.beginPath();
+  ctx.roundRect(-80, -18, 110, 36, 12);
+  ctx.fill();
+  ctx.stroke();
+
+  // Wrist stasis cuff
+  ctx.fillStyle = '#37474f';
+  ctx.fillRect(-70, -22, 22, 44);
+  ctx.strokeRect(-70, -22, 22, 44);
+
+  // Pale grasping fingers lunging toward Maya
+  ctx.fillStyle = '#607d8b';
+  for (let f = 0; f < 4; f++) {
+    ctx.beginPath();
+    ctx.roundRect(-102 - f * 3, -24 + f * 12, 32, 11, 5);
+    ctx.fill();
+    ctx.stroke();
+  }
+  ctx.restore();
+  ctx.restore();
+
+  // 3. HERO CHARACTER: Maya horrified in front-left, clutching red keycard!
+  ctx.save();
+  drawMaya(ctx, 280, 1100, 1.05, {
+    mood: 'shock',
+    pose: 'reach',
+    look: [0.72, -0.15],
+    sweat: true,
+  });
+  ctx.restore();
+
+  // Red glow bloom around Maya's keycard hand (no duplicate card!)
+  ctx.fillStyle = radGrad(ctx, 485, 1020, 10, 120, [
+    [0, 'rgba(255, 23, 68, 0.45)'],
+    [1, 'rgba(255, 23, 68, 0)'],
+  ]);
+  ctx.beginPath();
+  ctx.arc(485, 1020, 120, 0, TAU);
+  ctx.fill();
+
+  // 4. EVIDENCE BADGES & VIRAL HIGH-CTR STICKERS
+  // Vintage Autopsy Stamp near tank top
+  drawStamp(ctx, {
+    text: 'AUTOPSY INCOMPLETE',
+    x: 770,
+    y: 710,
+    rot: -0.09,
+    bg: PAL.crimson,
+    fg: '#FFFFFF',
+    size: 28,
+  });
+
+  // Specimen #1308 Biohazard Badge
+  rrPath(ctx, 740, 1230, 240, 48, 12);
+  fillStroke(ctx, 'rgba(10, 25, 20, 0.94)', 3, '#00e676');
+  ctx.fillStyle = '#00e676';
+  ctx.font = '900 22px Inter, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('SPECIMEN #1308', 860, 1254);
+
+  // Main Shock Hook Stamp near Maya
+  drawStamp(ctx, {
+    text: 'VO LAASH MERI HAI?!',
+    x: 290,
+    y: 1240,
+    rot: -0.06,
+    bg: PAL.gold,
+    fg: '#0A0D14',
+    size: 34,
+  });
+
+  // Dark Web Live Stream Overlay (Top-Left inside safe area)
+  rrPath(ctx, 60, 690, 360, 46, 12);
+  fillStroke(ctx, 'rgba(10, 14, 22, 0.92)', 3, 'rgba(255, 23, 68, 0.8)');
+  ctx.fillStyle = '#ff1744';
+  ctx.beginPath(); ctx.arc(84, 713, 7, 0, TAU); ctx.fill();
+  ctx.font = '900 20px Inter, sans-serif';
+  ctx.fillStyle = '#FFFFFF';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('LIVE 104,281 VIEWERS', 104, 714);
+
+  // 5. TOP SAFE-ZONE COVER TYPOGRAPHY (y: 430..680 inside 1:1 Instagram Square)
+  // Hospital Location Pill Tag
+  ctx.font = '900 26px Inter, sans-serif';
+  const subTxt = 'MILLBROOK HOSPITAL  •  VAULT 1308';
+  const pw = ctx.measureText(subTxt).width + 64;
+  rrPath(ctx, (W - pw) / 2, 436, pw, 48, 24);
+  fillStroke(ctx, 'rgba(13, 16, 23, 0.95)', 3.5, PAL.gold);
+  ctx.fillStyle = PAL.gold;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(subTxt, W / 2, 462);
+
+  // Massive 3D Poster Title visible clearly even on small mobile grids
+  const drawPosterText = (txt, x, y, fontPx, fillCol, strokeW = 16) => {
+    ctx.save();
+    ctx.font = `900 ${fontPx}px Inter, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.lineJoin = 'round';
+    ctx.shadowColor = 'rgba(0,0,0,0.92)';
+    ctx.shadowBlur = 22;
+    ctx.shadowOffsetY = 10;
+    ctx.strokeStyle = '#06080D';
+    ctx.lineWidth = strokeW;
+    ctx.strokeText(txt, x, y);
+    ctx.shadowColor = 'transparent';
+    ctx.fillStyle = fillCol;
+    ctx.fillText(txt, x, y);
+    ctx.restore();
+  };
+
+  drawPosterText('THE FREE LIFT', W / 2, 558, 116, '#FFFFFF', 18);
+
+  // Red Episode Accent Strip
+  rrPath(ctx, W / 2 - 290, 630, 580, 54, 14);
+  fillStroke(ctx, PAL.crimson, 4.5, INK);
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = '900 28px Inter, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('EPISODE 2  •  THE AUTOPSY CLONE', W / 2, 658);
+
+  // 6. BOTTOM SAFE-ZONE HOOK BAR (y: 1348..1460 inside 1:1 square)
+  ctx.fillStyle = linGrad(ctx, 0, 1270, 0, 1510, [
+    [0, 'rgba(6, 9, 15, 0)'],
+    [0.35, 'rgba(6, 9, 15, 0.90)'],
+    [1, 'rgba(6, 9, 15, 0.98)'],
+  ]);
+  ctx.fillRect(0, 1270, W, 240);
+
+  rrPath(ctx, 68, 1344, W - 136, 112, 20);
+  fillStroke(ctx, 'rgba(13, 17, 26, 0.96)', 4, PAL.gold);
+  ctx.font = '900 32px Inter, sans-serif';
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fillText('"TERI SHIFT 30 SAAL PEHLE SHURU HUI THI..."', W / 2, 1380);
+  ctx.font = '900 36px Inter, sans-serif';
+  ctx.fillStyle = PAL.gold;
+  ctx.fillText('1978 KI LAASH... MERA HI CHEHRA!', W / 2, 1424);
+
+  // 7. OUTER 9:16 VERTICAL HEADER & FOOTER (Reels & Shorts Framing)
+  ctx.font = '900 30px Inter, sans-serif';
+  ctx.fillStyle = '#FF9C96';
+  ctx.fillText('SEALED ARCHIVE • 1978', W / 2, 125);
+  ctx.font = '900 22px FreeMono, monospace';
+  ctx.fillStyle = '#9CB2C9';
+  ctx.fillText('CASE FILE #1308: UNMAPPED ELEVATOR TRAUMA', W / 2, 172);
+
+  // Bottom interactive voting tease (y: 1560..1760)
+  rrPath(ctx, 80, 1555, 435, 98, 18);
+  fillStroke(ctx, 'rgba(10, 36, 26, 0.95)', 4, '#00e676');
+  ctx.fillStyle = '#00e676';
+  ctx.font = '900 32px Inter, sans-serif';
+  ctx.fillText('WIRE [A]', 297, 1592);
+  ctx.fillStyle = '#c8facc';
+  ctx.font = '700 22px FreeMono, monospace';
+  ctx.fillText('CUT CHEST DIAL', 297, 1628);
+
+  rrPath(ctx, 565, 1555, 435, 98, 18);
+  fillStroke(ctx, 'rgba(48, 12, 16, 0.95)', 4, PAL.crimson);
+  ctx.fillStyle = '#ff7675';
+  ctx.font = '900 32px Inter, sans-serif';
+  ctx.fillText('WRIST [B]', 782, 1592);
+  ctx.fillStyle = '#ffd6d6';
+  ctx.font = '700 22px FreeMono, monospace';
+  ctx.fillText('SEVER TO ESCAPE', 782, 1628);
+
+  ctx.fillStyle = '#E5EAEF';
+  ctx.font = '900 26px Inter, sans-serif';
+  ctx.fillText('WATCH TILL THE END  —  YOUR VOTE WRITES PART 3', W / 2, 1725);
+
+  // 8. CINEMATIC FINISH
+  vignette(ctx, 0.40);
+  filmGrainOverlay(ctx, 0.025);
+  window.COVER_READY = true;
+}
+
+renderCover();
+</script>
+</body>
+</html>

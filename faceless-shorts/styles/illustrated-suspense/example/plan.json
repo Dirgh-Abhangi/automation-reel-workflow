@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "palette": "night",
+  "character": {"skin":"#e5bd94","hair":"#463630","coat":"#b87948","shirt":"#e1d6b7","hairStyle":"swept"},
+  "status": "NIGHT 04",
+  "shots": [
+    {"type":"establish","duration":2.2,"caption":"THE LIGHT CAME BACK.","highlight":"LIGHT","expression":"worried"},
+    {"type":"insert","duration":1.8,"caption":"SOMEONE WAS INSIDE.","highlight":"INSIDE.","expression":"worried"},
+    {"type":"reaction","duration":2.0,"caption":"BUT YOU LIVE ALONE.","highlight":"ALONE.","expression":"surprised"},
+    {"type":"choice","duration":2.0,"caption":"WHICH DOOR?","highlight":"DOOR?","expression":"worried"}
+  ]
+}

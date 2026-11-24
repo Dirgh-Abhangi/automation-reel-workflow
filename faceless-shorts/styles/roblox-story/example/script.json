@@ -1,0 +1,52 @@
+{
+  "title": "The Rule At Eighteen",
+  "voice": "am_fenrir",
+  "speed": 1.08,
+  "lead": 0.25,
+  "outro": 0.9,
+  "gap": 0.16,
+  "music": "roblox_arcade",
+  "lines": [
+    {
+      "text": "In this town, whatever number floats over your head",
+      "caps": "In this *TOWN | whatever !NUMBER | floats | over your | head"
+    },
+    {
+      "text": "decides how strong your shadow twin will be.",
+      "caps": "decides | how *STRONG | your ~SHADOW | ~TWIN | will be.",
+      "gap": 0.20
+    },
+    {
+      "text": "The morning Leo turned eighteen, the whole sky went red,",
+      "caps": "The morning | Leo turned *18, | the sky | went !RED,"
+    },
+    {
+      "text": "and his counter glitched all the way to nine thousand nine hundred ninety nine!",
+      "caps": "and his ~COUNTER | !GLITCHED | all the way | to !9,999!",
+      "gap": 0.20
+    },
+    {
+      "text": "And what stepped out of the portal wasn't a twin.",
+      "caps": "What | stepped out | wasn't a | !TWIN.",
+      "gap": 0.18
+    },
+    {
+      "text": "Wait, why did it come with a giant glowing snooze button?",
+      "caps": "Wait, | why a | glowing !SNOOZE | !BUTTON?",
+      "gap": 0.20
+    },
+    {
+      "text": "So Leo didn't run away,",
+      "caps": "So *LEO | didn't | ~RUN..."
+    },
+    {
+      "text": "he booped it right on the chest!",
+      "caps": "he *BOOPED | it !RIGHT | on the | ~CHEST!",
+      "gap": 0.24
+    },
+    {
+      "text": "Always read the fine print before turning eighteen.",
+      "caps": "Always read | the *FINE | *PRINT | before *18."
+    }
+  ]
+}

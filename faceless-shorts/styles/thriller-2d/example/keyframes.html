@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Free Lift — 2D Keyframe Gallery</title>
+<style>
+  @font-face { font-family: 'Inter'; font-weight: 900; src: url('fonts/Inter-Black.otf'); }
+  @font-face { font-family: 'FreeMono'; font-weight: 700; src: url('fonts/FreeMonoBold.ttf'); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0c0e14;
+    color: #f4f6f9;
+    font-family: Inter, system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+  }
+  body.capture { padding: 0; overflow: hidden; background: #000; }
+  body.capture #bar { display: none; }
+  body.capture #cv { width: 1080px; height: 1920px; }
+  #bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+  button {
+    border: 2px solid #2d3646;
+    background: #171c26;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  button.active { background: #e4322b; border-color: #f2c94c; }
+  #meta { font-family: FreeMono, monospace; font-size: 13px; color: #9eb0c2; margin-bottom: 10px; }
+  #cv { height: 86vh; width: auto; border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.7); }
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="meta"></div>
+<canvas id="cv" width="1080" height="1920"></canvas>
+<script type="module">
+import { KEYFRAMES } from './src/keyframes.js';
+
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+const bar = document.getElementById('bar');
+const meta = document.getElementById('meta');
+
+const isCapture = location.search.includes('capture');
+if (isCapture) document.body.className = 'capture';
+
+function renderKey(index) {
+  const kf = KEYFRAMES[index] || KEYFRAMES[0];
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, 1080, 1920);
+  kf.render(ctx);
+  if (!isCapture) {
+    meta.textContent = `${kf.id} — ${kf.title} | "${kf.scriptBeat}"`;
+    [...bar.children].forEach((b, i) => b.classList.toggle('active', i === index));
+  }
+  return kf.id;
+}
+
+if (!isCapture) {
+  KEYFRAMES.forEach((kf, i) => {
+    const b = document.createElement('button');
+    b.textContent = kf.id;
+    b.onclick = () => renderKey(i);
+    bar.appendChild(b);
+  });
+}
+
+// Wait for custom fonts before signaling readiness to headless Chrome
+await document.fonts.ready;
+renderKey(0);
+
+window.KF = {
+  ready: true,
+  count: () => KEYFRAMES.length,
+  meta: () => KEYFRAMES.map((k) => ({ id: k.id, title: k.title, scriptBeat: k.scriptBeat })),
+  frame(idx) {
+    renderKey(idx);
+    return cv.toDataURL('image/png');
+  },
+};
+</script>
+</body>
+</html>
+

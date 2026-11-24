@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 13th Floor - Episode 2: 20-Shot Keyframe Inspection & Voice Script</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700;800;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #080c14;
+    color: #e2e8f0;
+    font-family: 'Mukta', system-ui, sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+  body.capture {
+    background: #000;
+    padding: 0;
+    justify-content: center;
+  }
+  body.capture .sidebar { display: none; }
+  body.capture #cv {
+    width: 1080px;
+    height: 1920px;
+    border-radius: 0;
+  }
+
+  /* Left Panel: Keyframe Preview */
+  .preview-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #111a2e 0%, #080d18 70%, #03050a 100%);
+    position: relative;
+    padding: 16px;
+  }
+  #cv {
+    height: 94vh;
+    width: auto;
+    aspect-ratio: 9 / 16;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(228, 50, 43, 0.25);
+    border: 3px solid rgba(255, 215, 0, 0.35);
+  }
+
+  /* Right Panel: Script & Storyboard Notes */
+  .sidebar {
+    width: 480px;
+    background: #0c121d;
+    border-left: 1px solid rgba(255, 215, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    overflow-y: auto;
+  }
+  .sidebar-header {
+    margin-bottom: 20px;
+  }
+  .pill-badge {
+    display: inline-block;
+    background: rgba(228, 50, 43, 0.2);
+    border: 1px solid #e4322b;
+    color: #ff8a80;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .meta-sub {
+    font-size: 14px;
+    color: #94a3b8;
+  }
+
+  /* Shot Selector Grid */
+  .selector-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffd700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .shot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .shot-btn {
+    background: #172030;
+    border: 1px solid #2d3e58;
+    color: #cbd5e1;
+    padding: 8px 0;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .shot-btn:hover {
+    background: #25334c;
+    border-color: #ffd700;
+  }
+  .shot-btn.active {
+    background: #e4322b;
+    color: #fff;
+    border-color: #ffd700;
+    box-shadow: 0 0 12px rgba(228, 50, 43, 0.5);
+  }
+
+  /* Details Card */
+  .details-box {
+    background: #131b2a;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+  }
+  .section-tag {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffd700;
+    margin-bottom: 6px;
+  }
+  .dialogue-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 14px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid #ffd700;
+  }
+  .sfx-pill {
+    background: rgba(2, 136, 209, 0.2);
+    border: 1px solid #0288d1;
+    color: #81d4fa;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: monospace;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .nav-row {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+  }
+  .nav-btn {
+    flex: 1;
+    background: #1e293b;
+    border: 1px solid #475569;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .nav-btn:hover {
+    background: #334155;
+    border-color: #ffd700;
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-panel">
+  <canvas id="cv" width="1080" height="1920"></canvas>
+</div>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <span class="pill-badge">EPISODE 2 KEYFRAME INSPECTOR</span>
+    <h1 id="shotTitle">Shot 1: The Flesh-Fused Keycard</h1>
+    <div class="meta-sub" id="shotTime">0:00 – 0:05 | Patient Record #1308</div>
+  </div>
+
+  <div class="selector-label">SELECT SHOT (1 TO 20)</div>
+  <div class="shot-grid" id="shotGrid"></div>
+
+  <div class="details-box">
+    <div class="section-tag">HINGLISH RECORDING SCRIPT</div>
+    <div class="dialogue-text" id="dialogueText">"Maya ki kaanpti ungliyan..."</div>
+
+    <div class="section-tag">PROCEDURAL SOUND FX</div>
+    <div class="sfx-pill" id="sfxText">[flesh_tear_squelch, eerie low hum]</div>
+  </div>
+
+  <div class="nav-row">
+    <button class="nav-btn" id="prevBtn">◀ PREVIOUS SHOT</button>
+    <button class="nav-btn" id="nextBtn">NEXT SHOT ▶</button>
+  </div>
+</div>
+
+<script type="module">
+import { KEYFRAMES_EP2 } from './src/keyframes_ep2.js';
+
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+const shotGrid = document.getElementById('shotGrid');
+const shotTitle = document.getElementById('shotTitle');
+const shotTime = document.getElementById('shotTime');
+const dialogueText = document.getElementById('dialogueText');
+const sfxText = document.getElementById('sfxText');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let currentIndex = 0;
+
+const sfxMap = [
+  '[flesh_tear_squelch, eerie low hum]',
+  '[violent skull smash on glass, loud spiderweb crack]',
+  '[sub-bass drop, icy breath right into ear]',
+  '[rapid fabric tear, metal mailbox screech]',
+  '[120dB metal guillotine slam, sparks flying, red siren]',
+  '[sloshing wet footsteps, dark fluid dripping]',
+  '[sprinting footsteps, heavy breathing, metal creak]',
+  '[digital chime, high-voltage pneumatic hiss]',
+  '[pressurized freezing gas blast]',
+  '[skin crackling like thin ice, rapid heartbeat]',
+  '[parasitic slithering sound, Geiger counter clicks]',
+  '[24 steel drawers violently clattering from inside]',
+  '[slow coarse zipper sliding open, electrical buzz]',
+  '[high pitched tinnitus ringing, breath hitch]',
+  '[intercom crackle, tape hiss, maniacal laugh]',
+  '[rapid notification pings, phone buzz]',
+  '[violent bone-crunch grip, sharp scream]',
+  '[3 wire snips (SNIP!), mechanical clock ticking down]',
+  '[drawers blasting open, raspy breathing]',
+  '[emergency siren pulse, flatline beep]'
+];
+
+function renderShot(idx) {
+  currentIndex = idx;
+  const kf = KEYFRAMES_EP2[idx];
+  if (!kf) return;
+
+  // Render to Canvas
+  ctx.save();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, 1080, 1920);
+  kf.render(ctx);
+  ctx.restore();
+
+  // Update Sidebar
+  shotTitle.textContent = kf.title;
+  dialogueText.textContent = `"${kf.hinglish}"`;
+  sfxText.textContent = sfxMap[idx] || '[ambient dread]';
+
+  // Update Grid Buttons
+  document.querySelectorAll('.shot-btn').forEach((b, i) => {
+    b.className = i === idx ? 'shot-btn active' : 'shot-btn';
+  });
+}
+
+// Build buttons
+KEYFRAMES_EP2.forEach((kf, i) => {
+  const btn = document.createElement('button');
+  btn.className = i === 0 ? 'shot-btn active' : 'shot-btn';
+  btn.textContent = String(i + 1).padStart(2, '0');
+  btn.onclick = () => renderShot(i);
+  shotGrid.appendChild(btn);
+});
+
+prevBtn.onclick = () => {
+  const next = (currentIndex - 1 + KEYFRAMES_EP2.length) % KEYFRAMES_EP2.length;
+  renderShot(next);
+};
+nextBtn.onclick = () => {
+  const next = (currentIndex + 1) % KEYFRAMES_EP2.length;
+  renderShot(next);
+};
+
+// Expose window.KF contract for headless Chrome snapshotting
+window.KF = {
+  ready: true,
+  count: () => KEYFRAMES_EP2.length,
+  meta: () => KEYFRAMES_EP2.map((k, i) => ({ id: `KF-${String(i + 1).padStart(2, '0')}`, title: k.title })),
+  frame: (idx) => {
+    renderShot(idx);
+    return cv.toDataURL('image/png');
+  }
+};
+
+// Initial render
+renderShot(0);
+</script>
+</body>
+</html>

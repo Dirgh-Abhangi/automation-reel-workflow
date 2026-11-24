@@ -1,0 +1,12 @@
+# OS & Temporary Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Heavy Cache
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+env/

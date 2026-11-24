@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "story": "The dropped cup: C01 notices an empty cup, picks it up and offers it to seated C02. End before any handover. Visual-only. Fictional scene.",
+  "aspect": "9:16",
+  "references": {
+    "R7": "Video-74706.mp4; forest overview. Drawing language only; original identities."
+  },
+  "creative_freedom": [],
+  "characters": [
+    {
+      "id": "C01",
+      "appearance": {
+        "age": "young adult man",
+        "build": "slim; standing about one head taller than C02",
+        "skin": "medium brown",
+        "face": "Oval face; medium almond-shaped dark-brown eyes with small highlights, gently curved dark brows, small rounded nose, narrow closed mouth at rest; no facial scars or marks",
+        "hair": "short dark wavy hair; no facial hair",
+        "clothing": "ochre knee-length tunic, cream trousers, brown sandals",
+        "accessories": "NONE"
+      },
+      "locked": "Keep all design features identical across shots",
+      "reference": "R7"
+    },
+    {
+      "id": "C02",
+      "appearance": {
+        "age": "older adult woman",
+        "build": "average build; shorter than C01",
+        "skin": "warm brown",
+        "face": {
+          "shape": "rounded",
+          "details": "ASK"
+        },
+        "hair": "silver hair in low bun",
+        "clothing": "muted green long tunic, cream scarf, dark-brown flat shoes",
+        "accessories": "NONE"
+      },
+      "locked": "Seated throughout; no hair, costume or age changes",
+      "reference": "R7"
+    }
+  ],
+  "environments": [
+    {
+      "id": "E01",
+      "time": "daylight",
+      "layout": "Bench screen-right on flat earth; C02 seated at left end; clear action area screen-left; three distant trunks behind bench",
+      "details": "wooden bench, subdued canopy, small grass tufts; no buildings, animals or extra people",
+      "palette": "warm earth, subdued green foliage",
+      "lighting": "warm light from upper screen-left",
+      "reference": "R7"
+    }
+  ],
+  "props": [
+    {
+      "id": "P01",
+      "appearance": "empty unengraved palm-sized brass cup; no handle, lid or liquid",
+      "initial_owner": "NONE",
+      "initial_location": "upright on ground immediately screen-left of bench E01"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "seconds": 4,
+      "narration": "NONE",
+      "environment": "E01",
+      "cast": [
+        "C01",
+        "C02"
+      ],
+      "props": [
+        "P01"
+      ],
+      "blocking": "C01 stands screen-left facing screen-right; C02 sits screen-right; cup visible",
+      "action": {
+        "start": "C01 looks down at P01",
+        "anticipation": "Still body; gaze shifts before brow lift",
+        "movement": "Lift eyebrows slightly; hold discovery",
+        "contact": "Feet planted; cup grounded",
+        "end": "C01 gazes at cup; C02 seated"
+      },
+      "expression": "C01 notices cup; C02 calm",
+      "framing": "Static medium-wide; both people and cup visible",
+      "continuity": "Same clothing, bench, trees and screen direction. C02 remains seated. Track cup ownership between shots.",
+      "avoid": "No invented dialogue, handover, extra people, magic, stretching, sliding or teleporting",
+      "reference": "R7"
+    },
+    {
+      "id": "S02",
+      "seconds": 4,
+      "narration": "NONE",
+      "environment": "E01",
+      "cast": [
+        "C01"
+      ],
+      "props": [
+        "P01"
+      ],
+      "blocking": "C01 and cup full-body crop; bench edge visible; same screen direction; C02 remains seated outside the crop",
+      "action": {
+        "start": "C01 stands with gaze on cup",
+        "anticipation": "Bend at hips and knees",
+        "movement": "Reach actor-right hand, close around cup, rise",
+        "contact": "Both feet planted; cup lifts only after grasp; hand carries cup",
+        "end": "C01 standing holding P01 in actor-right hand"
+      },
+      "expression": "Attentive; C02 remains calm",
+      "framing": "Static full-body C01 with cup and bench edge",
+      "continuity": "Same clothing, bench, trees and screen direction. C02 remains seated. Track cup ownership between shots.",
+      "avoid": "No invented dialogue, handover, extra people, magic, stretching, sliding or teleporting",
+      "reference": "R7"
+    },
+    {
+      "id": "S03",
+      "seconds": 4,
+      "narration": "NONE",
+      "environment": "E01",
+      "cast": [
+        "C01",
+        "C02"
+      ],
+      "props": [
+        "P01"
+      ],
+      "blocking": "C01 screen-left, C02 seated screen-right",
+      "action": {
+        "start": "C01 standing holding P01",
+        "anticipation": "Look toward C02 face",
+        "movement": "Extend cup to C02 seated chest height",
+        "contact": "P01 stays in C01 actor-right hand; C02 hands in lap",
+        "end": "Hold offer; no transfer"
+      },
+      "expression": "C01 attentive; C02 looks from cup to face and smiles",
+      "framing": "Static medium two-person shot",
+      "continuity": "Same clothing, bench, trees and screen direction. C02 remains seated. Track cup ownership between shots.",
+      "avoid": "No invented dialogue, handover, extra people, magic, stretching, sliding or teleporting",
+      "reference": "R7"
+    }
+  ]
+}

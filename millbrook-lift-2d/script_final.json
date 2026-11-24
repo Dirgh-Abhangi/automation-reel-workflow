@@ -1,0 +1,36 @@
+{
+  "title": "The Free Lift — Episode 1: Final Master Voice Sync",
+  "externalAudio": true,
+  "audioPath": "../millbrook-lift-ep1/Part one final audio.mp3",
+  "music": "horror_score",
+  "lines": [
+    { "id": 0,  "act": 1, "character": "Narrator", "start":   0.19, "end":   3.50, "text": "Har hospital ke blueprint par... sirf barah floors likhe hain.", "caps": "HAR BLUEPRINT PAR | *12 FLOORS." },
+    { "id": 1,  "act": 1, "character": "Narrator", "start":   4.53, "end":   7.34, "text": "Lekin is peetal ki lift ke andar... terah buttons hain.", "caps": "IS LIFT KE ANDAR | *13 BUTTONS." },
+    { "id": 2,  "act": 1, "character": "Narrator", "start":   7.83, "end":  10.61, "text": "Par kya aapko pata hai... ye aakhir kiske liye rukti hai?", "caps": "YE AAKHIR | *KISKE LIYE *RUKTI HAI?" },
+    { "id": 3,  "act": 2, "character": "Narrator", "start":  11.18, "end":  17.28, "text": "Ninyanve raat tak, Maya ne khaali corridors shoot kiye... bhooton ko jhootha saabit karne.", "caps": "*99 RAATEIN | khaali corridors *shoot kiye." },
+    { "id": 4,  "act": 2, "character": "Narrator", "start":  17.70, "end":  19.94, "text": "Sirf dhool. Zero views. Koi bhoot pret nahi.", "caps": "*ZERO VIEWS. | *KOI BHOOT NAHI." },
+    { "id": 5,  "act": 2, "character": "Narrator", "start":  21.13, "end":  25.70, "text": "Phir ek leaked nurse comment ne usey Wing B bheja... theek do saintalis AM par.", "caps": "EK LEAKED *DARE: | MILLBROOK *WING B | *2:47 AM." },
+    { "id": 6,  "act": 3, "character": "Narrator", "start":  25.87, "end":  30.03, "text": "Band lobby ke andar, usey watchman ke teen purane rules... likhe mile.", "caps": "USEY MILE | TEEN NIGHT *RULES." },
+    { "id": 7,  "act": 3, "character": "Narrator", "start":  30.61, "end":  35.34, "text": "Rule number ek... khule morgue darwaze ke andar... kabhi mat jana.", "caps": "RULE 1: | *OPEN MORGUE | MEIN MAT JANA." },
+    { "id": 8,  "act": 3, "character": "Narrator", "start":  35.79, "end":  39.88, "text": "Rule number do... agar lift apne aap chale... to sheeshe mein mat dekhna.", "caps": "RULE 2: | SHEESHE MEIN | *MAT DEKHNA." },
+    { "id": 9,  "act": 3, "character": "Narrator", "start":  40.36, "end":  45.83, "text": "Rule number teen... Floor terah 1978 se sealed hai. Speaker tumhara naam le... to jawab mat dena.", "caps": "RULE 3: | SEALED *1978. | *JAWAB MAT DENA." },
+    { "id": 10, "act": 4, "character": "Narrator", "start":  46.95, "end":  51.36, "text": "Basement hallway mein... barfeeli hawa... teen inch khule morgue door se aa rahi thi.", "caps": "*MORGUE DOOR | TEEN INCH *KHULA THA." },
+    { "id": 11, "act": 4, "character": "Maya",     "start":  51.74, "end":  56.33, "text": "Night one hundred... wait, ye morgue door khula hua kyun hai?", "caps": "*NIGHT 100... | ye morgue door *khula kyun hai?" },
+    { "id": 12, "act": 4, "character": "Narrator", "start":  56.69, "end":  60.35, "text": "Maya paas gayi... aur usne woh thanda peetal ka handle... kheench liya.", "caps": "USNE KHEENCHA | *THANDA HANDLE..." },
+    { "id": 13, "act": 4, "character": "Narrator", "start":  62.03, "end":  65.28, "text": "Uska phone ek baar jhapka. Sirf ek percent bacha tha.", "caps": "PHONE JHAPKA: | *1% BATTERY." },
+    { "id": 14, "act": 4, "character": "Narrator", "start":  65.62, "end":  67.86, "text": "Tabhi achanak... bilkul ghana... andhera.", "caps": "TABHI ACHANAK... | *GHANA *ANDHERA." },
+    { "id": 15, "act": 4, "character": "Maya",     "start":  69.20, "end":  70.84, "text": "Hello? Koi hai yahan?", "caps": "*HELLO?! | *KOI HAI YAHAN?" },
+    { "id": 16, "act": 5, "character": "Narrator", "start":  71.16, "end":  77.05, "text": "Peeche peetal ki lift khud khul gayi. Woh andar gayi... aur lohe ke darwaze zor se band ho gaye.", "caps": "WOH ANDAR GAYI. | DOORS *SLAMMED *SHUT." },
+    { "id": 17, "act": 5, "character": "Narrator", "start":  77.62, "end":  82.90, "text": "Floor ek... floor paanch... floor baarah. Phir usne upar dekha... us sheeshe mein...", "caps": "FLOOR 1... 5... *12. | SHEESHE MEIN *DEKHA..." },
+    { "id": 18, "act": 5, "character": "Narrator", "start":  83.95, "end":  88.20, "text": "Aur sunn reh gayi. Sheeshe ke andar... poori lift... bilkul khaali thi.", "caps": "SHEESHA | BILKUL *KHAALI THA." },
+    { "id": 19, "act": 5, "character": "Maya",     "start":  88.53, "end":  92.62, "text": "Ruko, main kahan hoon?! Main khud ko dekh kyun nahi paa rahi?!", "caps": "*MAIN KAHAN HOON?! | khud ko *dekh kyun nahi rahi?!" },
+    { "id": 20, "act": 6, "character": "DrWard",   "start":  92.90, "end":  98.50, "text": "Maya Chen. You were never supposed to find this. Welcome to Floor thirteen.", "caps": "WARD: *MAYA CHEN. | WELCOME TO | *FLOOR 13." },
+    { "id": 21, "act": 6, "character": "Narrator", "start": 100.25, "end": 107.78, "text": "Darwaze andhere mein khule... beech mein purana mailbox, uski khud ki file... stamped dead 1978.", "caps": "MAILBOX MEIN | USKI APNI FILE... | STAMPED *DECEASED 1978." },
+    { "id": 22, "act": 6, "character": "Entity",   "start": 108.09, "end": 110.24, "text": "Ab woh... tumhari hui.", "caps": "*\"AB WOH *TUMHARI HUI.\"" },
+    { "id": 23, "act": 6, "character": "Maya",     "start": 110.75, "end": 113.51, "text": "Yeh... yeh mere haathon ko kya ho raha hai?!", "caps": "MERE HAATHON KO | *KYA HO RAHA HAI?!" },
+    { "id": 24, "act": 6, "character": "Narrator", "start": 113.86, "end": 119.36, "text": "Peeche sheeshe mein... do kaali khokhli aankhein muskura rahi thin... woh Maya nahi thi.", "caps": "*KHOKHLI AANKHEIN | MUSKURA RAHI THIN. | WOH *MAYA NAHI THI." },
+    { "id": 25, "act": 7, "character": "Narrator", "start": 119.81, "end": 124.88, "text": "Agar aap Floor terah par phanse hote... to Exit doors ki taraf bhaagte, ya chamakta Keycard uthaate?", "caps": "*EXIT [A] BHAAGOGE | YA *KEYCARD [B]?" },
+    { "id": 26, "act": 7, "character": "Narrator", "start": 125.31, "end": 129.49, "text": "Abhi comment mein A ya B likho. Follow karo... Part Two aap likhoge.", "caps": "COMMENT *A YA B! | *PART 2 AAP *LIKHOGE." }
+  ]
+}
+

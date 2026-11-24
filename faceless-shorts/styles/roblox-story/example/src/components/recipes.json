@@ -1,0 +1,261 @@
+{
+  "establish": {
+    "set": "street",
+    "lighting": "day",
+    "camera": {
+      "preset": "wide",
+      "target": "lead",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "motion": "talk"
+      }
+    ]
+  },
+  "conversation": {
+    "set": "office",
+    "lighting": "day",
+    "camera": {
+      "preset": "two_shot",
+      "target": "lead",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          -0.65,
+          0,
+          1
+        ],
+        "motion": "talk"
+      },
+      {
+        "id": "other",
+        "position": [
+          0.65,
+          0,
+          0.8
+        ],
+        "motion": "idle"
+      }
+    ]
+  },
+  "reaction": {
+    "set": "home",
+    "lighting": "day",
+    "camera": {
+      "preset": "close",
+      "target": "lead",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "motion": "react"
+      }
+    ]
+  },
+  "reveal": {
+    "set": "street",
+    "lighting": "day",
+    "camera": {
+      "preset": "low_reveal",
+      "target": "lead",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "motion": "idle"
+      }
+    ]
+  },
+  "chase": {
+    "set": "street",
+    "lighting": "day",
+    "camera": {
+      "preset": "wide",
+      "target": "lead",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          0,
+          0,
+          -1
+        ],
+        "motion": "run",
+        "to": [
+          0,
+          0,
+          3
+        ]
+      }
+    ]
+  },
+  "classroom": {
+    "set": "classroom",
+    "lighting": "day",
+    "camera": {
+      "preset": "medium",
+      "target": "lead",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          0,
+          0.2,
+          -0.7
+        ],
+        "motion": "sit"
+      },
+      {
+        "id": "other",
+        "position": [
+          2,
+          0.2,
+          -0.7
+        ],
+        "motion": "sit"
+      }
+    ]
+  },
+  "celebration": {
+    "set": "street",
+    "lighting": "day",
+    "camera": {
+      "preset": "two_shot",
+      "target": "lead",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          -0.6,
+          0,
+          1
+        ],
+        "motion": "celebrate"
+      },
+      {
+        "id": "other",
+        "position": [
+          0.7,
+          0,
+          1
+        ],
+        "motion": "wave"
+      }
+    ]
+  },
+  "confrontation": {
+    "set": "arena",
+    "lighting": "day",
+    "camera": {
+      "preset": "two_shot",
+      "target": "lead",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          -0.6,
+          0,
+          1
+        ],
+        "motion": "point"
+      },
+      {
+        "id": "other",
+        "position": [
+          0.7,
+          0,
+          1
+        ],
+        "motion": "react"
+      }
+    ]
+  },
+  "evidence": {
+    "set": "office",
+    "lighting": "day",
+    "camera": {
+      "preset": "insert",
+      "target": "clue",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "motion": "idle"
+      }
+    ],
+    "props": [
+      {
+        "id": "clue",
+        "kind": "document",
+        "owner": "lead",
+        "socket": "right",
+        "text": "WARNING"
+      }
+    ]
+  },
+  "device": {
+    "set": "lab",
+    "lighting": "day",
+    "camera": {
+      "preset": "insert",
+      "target": "clue",
+      "move": "hold"
+    },
+    "actors": [
+      {
+        "id": "lead",
+        "position": [
+          0,
+          0,
+          1
+        ],
+        "motion": "idle"
+      }
+    ],
+    "props": [
+      {
+        "id": "clue",
+        "kind": "phone",
+        "owner": "lead",
+        "socket": "right",
+        "text": "WARNING"
+      }
+    ]
+  }
+}

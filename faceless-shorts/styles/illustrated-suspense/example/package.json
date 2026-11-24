@@ -1,0 +1,1 @@
+{"name":"illustrated-suspense-proof","private":true,"type":"module","scripts":{"check":"node render.mjs --check","stills":"node render.mjs --stills"},"dependencies":{"sharp":"0.35.5"}}

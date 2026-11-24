@@ -1,0 +1,14 @@
+interface:
+  display_name: Faceless Shorts
+  short_description: Animated shorts with distinct, reusable visual workflows
+  default_prompt: Use $faceless-shorts to create an original animated short in my
+    chosen style, using its supported components and checking visual quality.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,66 @@
+{
+  "characters": {
+    "scientist": {
+      "hair": "bob",
+      "hairCol": "#202438",
+      "shirtStyle": "plain",
+      "shirtCol": "#e5e8ee",
+      "body": {
+        "height": 1.1,
+        "width": 0.9
+      },
+      "accessories": [
+        {
+          "kind": "glasses"
+        }
+      ]
+    },
+    "courier": {
+      "skin": "#a46c45",
+      "hair": "cap",
+      "shirtCol": "#218d7b",
+      "accessories": [
+        {
+          "kind": "backpack",
+          "color": "#de9e36"
+        }
+      ]
+    }
+  },
+  "audio": {
+    "music": "none"
+  },
+  "beats": [
+    {
+      "recipe": "device",
+      "duration": 3,
+      "cast": {
+        "lead": "scientist"
+      }
+    },
+    {
+      "recipe": "reaction",
+      "duration": 2,
+      "cast": {
+        "lead": "scientist"
+      },
+      "set": "lab"
+    },
+    {
+      "recipe": "conversation",
+      "duration": 4,
+      "cast": {
+        "lead": "scientist",
+        "other": "courier"
+      },
+      "set": "street"
+    },
+    {
+      "recipe": "chase",
+      "duration": 3,
+      "cast": {
+        "lead": "courier"
+      }
+    }
+  ]
+}

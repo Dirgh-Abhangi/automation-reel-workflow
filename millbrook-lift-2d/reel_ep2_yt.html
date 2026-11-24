@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 13th Floor - Episode 2: YouTube Cut (02:51 / Under 3 Minutes)</title>
+<style>
+  @font-face { font-family: 'Inter'; font-weight: 900; src: url('fonts/Inter-Black.otf'); }
+  @font-face { font-family: 'FreeMono'; font-weight: 700; src: url('fonts/FreeMonoBold.ttf'); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    margin: 0;
+    background: #070a12;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  #cv {
+    display: block;
+    height: 88vh;
+    width: auto;
+    aspect-ratio: 9 / 16;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(228, 50, 43, 0.25);
+    border: 3px solid rgba(255, 215, 0, 0.4);
+  }
+  body.capture {
+    background: #000;
+  }
+  body.capture #cv {
+    height: 1920px;
+    width: 1080px;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+  body.capture .controls-bar {
+    display: none;
+  }
+  .controls-bar {
+    position: fixed;
+    bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(12px);
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    z-index: 100;
+  }
+  #play {
+    font: 900 18px 'Inter', sans-serif;
+    padding: 10px 28px;
+    border: 2px solid #ffd700;
+    border-radius: 30px;
+    background: #e4322b;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(228, 50, 43, 0.5);
+    transition: all 0.2s ease;
+  }
+  #play:hover {
+    transform: scale(1.05);
+    background: #ff4d46;
+  }
+  .time-display {
+    font-size: 15px;
+    font-weight: 700;
+    color: #94a3b8;
+    min-width: 140px;
+    text-align: center;
+  }
+  .badge {
+    background: #ff0000;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+    padding: 4px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+
+<canvas id="cv" width="1080" height="1920"></canvas>
+
+<div class="controls-bar">
+  <span class="badge">YOUTUBE SHORTS</span>
+  <button id="play">▶ PLAY REEL (YOUTUBE)</button>
+  <div class="time-display">02:51 / &lt; 3 MIN</div>
+</div>
+
+<script>
+if (location.search.includes('capture')) document.body.className = 'capture';
+</script>
+<script type="module" src="src/main_ep2_yt.js"></script>
+</body>
+</html>

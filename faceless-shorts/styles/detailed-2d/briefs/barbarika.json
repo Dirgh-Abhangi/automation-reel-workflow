@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "story": "Barbarika & The 3 Arrows: Bound by a vow to his mother to support the losing army, supreme archer Barbarika heads to Kurukshetra with just 3 divine arrows. Lord Krishna, disguised as a Brahmin under a sacred Peepal tree, challenges him to pierce every leaf of the tree while secretly stepping on one leaf. Barbarika's first arrow marks all leaves with vermilion and hovers at Krishna's foot. Realizing Barbarika's paradoxical vow would annihilate both armies, Krishna requests his head as sacrifice, which Barbarika offers willingly, becoming immortalized as Khatu Shyam.",
+  "aspect": "9:16",
+  "references": {
+    "R7": "Video-74706.mp4; forest path, Brahmin ascetic, archer, composite bow, arrows, eye shapes and facial expressions.",
+    "R0": "Video-12446.mp4; Kurukshetra dusk battlefield overview and dramatic lighting."
+  },
+  "creative_freedom": [],
+  "characters": [
+    {
+      "id": "C01",
+      "appearance": {
+        "age": "young adult warrior (~20 years)",
+        "build": "tall athletic build, proud erect posture",
+        "skin": "warm golden-bronze skin tone",
+        "face": "sharp jawline, confident almond-shaped dark eyes with sharp brows, serene smile; no scars",
+        "hair": "dark wavy hair tied in an ornate high warrior bun with a gold clasp",
+        "clothing": "saffron-crimson dhoti with gold-embroidered hem, matching waist sash, brown sandals",
+        "accessories": "gold armlets (bajuband), necklace, quiver of 3 distinct arrows slung across back"
+      },
+      "locked": "Keep character design, facial features, and 3-arrow quiver identical across all shots",
+      "reference": "R7"
+    },
+    {
+      "id": "C02",
+      "appearance": {
+        "age": "elderly ascetic Brahmin",
+        "build": "slender, slightly stooped posture, shorter than Barbarika",
+        "skin": "warm dusky-wheatish skin tone",
+        "face": "serene all-knowing eyes, warm gentle smile, white-grey beard and moustache, red sandalwood tilak",
+        "hair": "silver-white hair tied in a modest ascetic topknot",
+        "clothing": "pristine white cotton dhoti, saffron-bordered shawl draped across left shoulder",
+        "accessories": "white sacred thread (janeu), wooden prayer beads, holding a curved bamboo staff in actor-left hand"
+      },
+      "locked": "Benevolent ascetic Brahmin appearance throughout until divine blessings",
+      "reference": "R7"
+    }
+  ],
+  "environments": [
+    {
+      "id": "E01",
+      "time": "morning daylight",
+      "layout": "Ancient Peepal tree on screen-right with sprawling branches; dusty dirt road in center; soft green foliage and distant tree trunks on screen-left",
+      "details": "heart-shaped Peepal leaves, wooden roots, small grass tufts; no modern elements",
+      "palette": "lush earthy greens, warm ochre path, filtered morning golden sunbeams",
+      "lighting": "warm directional light from upper screen-left filtering through canopy",
+      "reference": "R7"
+    },
+    {
+      "id": "E02",
+      "time": "golden dusk",
+      "layout": "Elevated rocky cliff edge in foreground overlooking distant Kurukshetra war tents and flags under sunset sky",
+      "details": "rocky ground, distant battlefield smoke, dramatic twilight horizon",
+      "palette": "crimson, saffron and deep twilight indigo",
+      "lighting": "dramatic golden hour rim lighting from low horizon",
+      "reference": "R0"
+    }
+  ],
+  "props": [
+    {
+      "id": "P01",
+      "appearance": "recurved composite warrior bow with gold bindings",
+      "initial_owner": "C01",
+      "initial_location": "held in actor-left hand of C01"
+    },
+    {
+      "id": "P02",
+      "appearance": "leather back quiver containing exactly 3 arrows with distinct colored fletchings (Red, Blue, Gold)",
+      "initial_owner": "C01",
+      "initial_location": "slung across right shoulder of C01"
+    },
+    {
+      "id": "P03",
+      "appearance": "divine 1st arrow with glowing red-vermilion point",
+      "initial_owner": "C01",
+      "initial_location": "inside quiver P02"
+    },
+    {
+      "id": "P04",
+      "appearance": "curved wooden bamboo ascetic walking staff",
+      "initial_owner": "C02",
+      "initial_location": "held in actor-left hand of C02"
+    },
+    {
+      "id": "P05",
+      "appearance": "green heart-shaped Peepal leaf",
+      "initial_owner": "NONE",
+      "initial_location": "on the ground immediately beneath C02 right foot"
+    },
+    {
+      "id": "P06",
+      "appearance": "curved ceremonial dagger with golden hilt",
+      "initial_owner": "C01",
+      "initial_location": "sheathed at actor-right waist of C01"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "seconds": 8,
+      "narration": "महाभारत के महायुद्ध की ओर बढ़ता एक ऐसा अजेय योद्धा... जिसके तरकश में केवल तीन ही बाण थे!",
+      "environment": "E01",
+      "cast": ["C01"],
+      "props": ["P01", "P02"],
+      "blocking": "C01 walks in from screen-left towards center; bow P01 in hand, quiver P02 on back",
+      "action": {
+        "start": "C01 strides forward with confidence",
+        "anticipation": "Slows pace as he approaches road center",
+        "movement": "Stops firmly, plants feet, looks ahead towards Kurukshetra",
+        "contact": "Feet planted on dusty ground",
+        "end": "C01 holds bow upright, confident stance"
+      },
+      "expression": "Proud, fearless warrior expression with sharp focused gaze",
+      "framing": "Full-body medium-wide shot; slow cinematic push-in",
+      "continuity": "Establish C01 costume, bow, and 3-arrow quiver",
+      "avoid": "No rushed steps or sliding feet",
+      "reference": "R7"
+    },
+    {
+      "id": "S02",
+      "seconds": 8,
+      "narration": "माता अहिलावती को दिया एक अटूट वचन: 'रणभूमि में जो पक्ष हार रहा होगा, मैं उसी की ओर से लडूंगा।'",
+      "environment": "E01",
+      "cast": ["C01"],
+      "props": ["P01", "P02"],
+      "blocking": "C01 centered; medium close-up view",
+      "action": {
+        "start": "C01 stands holding bow at side",
+        "anticipation": "Lowers eyes in deep filial respect",
+        "movement": "Brings free hand to chest in solemn pledge",
+        "contact": "Hand against chest near collar",
+        "end": "Holds hand to chest with resolute brow"
+      },
+      "expression": "Devotional, solemn, unbreakable determination",
+      "framing": "Medium close-up; golden rim light on face and hair",
+      "continuity": "Maintain lighting and identical facial proportions",
+      "avoid": "No frivolous movement or casual posture",
+      "reference": "R7"
+    },
+    {
+      "id": "S03",
+      "seconds": 8,
+      "narration": "किंतु मार्ग में एक वृद्ध ब्राह्मण खड़े मिले... जो कोई और नहीं, स्वयं द्वारकाधीश श्रीकृष्ण थे।",
+      "environment": "E01",
+      "cast": ["C01", "C02"],
+      "props": ["P01", "P02", "P04"],
+      "blocking": "C01 stands screen-left facing right; C02 stands screen-right under Peepal tree leaning on staff P04",
+      "action": {
+        "start": "C01 pauses upon seeing the elder; C02 looks at him with gentle warmth",
+        "anticipation": "C01 lowers bow slightly in deference",
+        "movement": "C01 bows head slightly; C02 raises right hand in blessing",
+        "contact": "Staff P04 resting on ground",
+        "end": "Both characters facing each other in quiet standoff"
+      },
+      "expression": "C01 respectful; C02 smiling with subtle divine mystery",
+      "framing": "Two-shot medium-wide; Peepal tree dominating screen-right",
+      "continuity": "Preserve screen positions (C01 left, C02 right)",
+      "avoid": "No sudden repositioning",
+      "reference": "R7"
+    },
+    {
+      "id": "S04",
+      "seconds": 8,
+      "narration": "ब्राह्मण मुस्कुराए: 'हे युवक, जहां लाखों महारथी हैं, वहां तुम मात्र तीन तीरों से क्या करोगे?'",
+      "environment": "E01",
+      "cast": ["C01", "C02"],
+      "props": ["P04"],
+      "blocking": "Medium two-shot favoring C02 screen-right",
+      "action": {
+        "start": "C02 leans lightly on staff P04",
+        "anticipation": "Tilts head quizzically with playful brow raise",
+        "movement": "Gestures with open right palm towards C01",
+        "contact": "Staff firmly planted",
+        "end": "C02 holds questioning gesture; C01 listens calmly"
+      },
+      "expression": "C02 gentle playful skepticism; C01 dignified composure",
+      "framing": "Medium two-shot",
+      "continuity": "Keep Peepal foliage visible overhead",
+      "avoid": "No angry or aggressive posturing",
+      "reference": "R7"
+    },
+    {
+      "id": "S05",
+      "seconds": 8,
+      "narration": "बर्बरीक ने कहा: 'पहला बाण निशानों को चिन्हित करेगा, दूसरा बाण रक्षा करेगा, और तीसरा सबका संहार कर वापस आएगा!'",
+      "environment": "E01",
+      "cast": ["C01", "C02"],
+      "props": ["P01", "P02", "P04"],
+      "blocking": "Medium shot centered on C01; C02 visible at right shoulder",
+      "action": {
+        "start": "C01 reaches right hand over shoulder towards quiver P02",
+        "anticipation": "Fingers hover over the 3 arrow tips",
+        "movement": "Touches the first arrow tip while explaining its divine power",
+        "contact": "Fingertip touching red arrow nock",
+        "end": "Hand rests lightly on quiver, eyes shining with quiet conviction"
+      },
+      "expression": "Confident, proud, articulate explanation",
+      "framing": "Medium shot; three arrow nocks clearly visible in quiver",
+      "continuity": "Confirm 3 distinct arrow fletchings (Red, Blue, Gold)",
+      "avoid": "Do not draw an empty quiver",
+      "reference": "R7"
+    },
+    {
+      "id": "S06",
+      "seconds": 8,
+      "narration": "ब्राह्मण ने चुनौती दी: 'यदि ऐसा है, तो इस पीपल के हर पत्ते को एक ही तीर से भेद कर दिखाओ!' और चुपके से एक पत्ता अपने पैर के नीचे दबा लिया।",
+      "environment": "E01",
+      "cast": ["C01", "C02"],
+      "props": ["P04", "P05"],
+      "blocking": "C02 screen-right points upward to canopy, then camera tilts slightly to reveal his foot",
+      "action": {
+        "start": "C02 points upward to Peepal canopy",
+        "anticipation": "C02 shifts weight onto left leg",
+        "movement": "Slides right foot forward, covering fallen leaf P05 completely",
+        "contact": "Sole of C02 foot firmly presses leaf P05 to earth",
+        "end": "C02 looks back at C01 with an innocent smile, leaf hidden underneath"
+      },
+      "expression": "C02 subtle mischievous and testing smile",
+      "framing": "Medium shot tilting smoothly down to foot contact area",
+      "continuity": "Leaf P05 placed directly beneath C02 right foot",
+      "avoid": "Do not let leaf pop or vanish abruptly",
+      "reference": "R7"
+    },
+    {
+      "id": "S07",
+      "seconds": 8,
+      "narration": "बर्बरीक ने पहला बाण छोड़ा! वह बिजली की गति से घूमा और पलक झपकते ही वृक्ष के हर एक पत्ते पर लाल कुमकुम का निशान लगा दिया!",
+      "environment": "E01",
+      "cast": ["C01", "C02"],
+      "props": ["P01", "P03"],
+      "blocking": "C01 draws bow P01 screen-left; glowing red arrow P03 shoots upward into Peepal canopy",
+      "action": {
+        "start": "C01 nocks arrow P03 onto string",
+        "anticipation": "Draws string to cheek with fluid power",
+        "movement": "Releases string; arrow transforms into glowing red streak darting through foliage",
+        "contact": "Red vermilion marks instantly appear on leaves across canopy",
+        "end": "C01 holds bow follow-through pose as canopy glows with red dots"
+      },
+      "expression": "Intense master-archer concentration, shifting to relaxed triumph",
+      "framing": "Dynamic vertical tilt from archer to expansive glowing canopy",
+      "continuity": "Peepal tree canopy remains in consistent position",
+      "avoid": "No mechanical stuttering of arrow trajectory",
+      "reference": "R7"
+    },
+    {
+      "id": "S08",
+      "seconds": 8,
+      "narration": "अंत में वह बाण श्रीकृष्ण के चरण के चारों ओर मंडराने लगा! बर्बरीक बोले: 'भगवन, चरण हटा लीजिए, उसके नीचे एक पत्ता छुपा है!'",
+      "environment": "E01",
+      "cast": ["C01", "C02"],
+      "props": ["P03", "P04", "P05"],
+      "blocking": "Close-up on C02 foot over leaf P05; glowing arrow P03 hovers horizontally 2 inches above foot",
+      "action": {
+        "start": "Arrow P03 descends from canopy and hovers in a tight loop above C02 foot",
+        "anticipation": "Arrow tip pulses with bright red light pointing straight down",
+        "movement": "C02 slowly lifts right foot; arrow dives and tags leaf P05 with a red dot",
+        "contact": "Arrow marks leaf P05 with vermilion",
+        "end": "Arrow returns gently to hover near C01 hand"
+      },
+      "expression": "C02 wide amazed eyes and admiring smile; C01 respectful warning",
+      "framing": "Low-angle close-up of foot, leaf, and glowing divine arrow",
+      "continuity": "Leaf P05 now visibly marked with red dot",
+      "avoid": "Arrow must not pierce the skin of C02 foot",
+      "reference": "R7"
+    },
+    {
+      "id": "S09",
+      "seconds": 8,
+      "narration": "श्रीकृष्ण समझ गए—यदि कौरव हारे तो बर्बरीक पांडवों को मारेगा, और यदि पांडव हारे तो कौरवों को! अंत में पूरी मानवता नष्ट हो जाएगी।",
+      "environment": "E01",
+      "cast": ["C01", "C02"],
+      "props": ["P04"],
+      "blocking": "Medium two-shot. C02 stands straight, radiating divine wisdom; C01 absorbs the chilling paradox",
+      "action": {
+        "start": "C02 lowers staff, steps closer to C01",
+        "anticipation": "C01 frowns as he realizes the horrifying consequence of his vow",
+        "movement": "C02 gestures to imaginary armies clashing; C01 lowers his head in deep moral clarity",
+        "contact": "Feet planted firmly",
+        "end": "C01 looks up at C02, ready for whatever Dharma demands"
+      },
+      "expression": "C02 profound grave wisdom; C01 deep awakening and acceptance",
+      "framing": "Dramatic medium two-shot with soft divine aura around C02",
+      "continuity": "Preserve lighting and character proportions",
+      "avoid": "No melodramatic panic; maintain epic solemnity",
+      "reference": "R7"
+    },
+    {
+      "id": "S10",
+      "seconds": 8,
+      "narration": "श्रीकृष्ण ने युद्ध की रक्षा हेतु उनका शीश मांग लिया। बिना एक क्षण सोचे, बर्बरीक ने हंसते हुए अपना शीश दान कर दिया... और बन गए कलयुग के 'खाटू श्याम'!",
+      "environment": "E02",
+      "cast": ["C01", "C02"],
+      "props": ["P06"],
+      "blocking": "Transition to hilltop E02 overlooking Kurukshetra. Golden celestial light engulfs scene",
+      "action": {
+        "start": "C01 touches hilt of P06 in selfless surrender, smiling serenely",
+        "anticipation": "Golden celestial aura expands from sky",
+        "movement": "C01 bows reverently; Krishna blesses him with raised hand as flowers drift",
+        "contact": "Divine light envelops the hilltop",
+        "end": "Golden immortal symbol of Khatu Shyam stands radiant over Kurukshetra"
+      },
+      "expression": "Supreme peace, divine joy, and immortal glory",
+      "framing": "Epic wide panoramic view of hilltop and Kurukshetra sunset horizon",
+      "continuity": "Smooth color grade transition to golden celestial dusk",
+      "avoid": "No graphic gore or violent decapitation; keep purely sacred and sublime",
+      "reference": "R0"
+    }
+  ]
+}
